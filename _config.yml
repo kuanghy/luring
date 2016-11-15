@@ -1,14 +1,16 @@
 # Site settings
-title: 博客标题
-subtitle: 博客副标题
-description: 博客描述
+title: 旷世的忧伤
+subtitle: Huoty's Blog
+description: Huoty's Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # 你的域名
-page_no_title: "No title" # 文章无标题时默认显示内容
+page_no_title: "旷世的忧伤 | Huoty's Blog" # 文章无标题时默认显示内容
 beian: # "备案号"
-email: email@yourdomain.com
+email: sudohuoty@gmail.com
 
 # Build settings
+permalink: /:year/:month/:day/:title/
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 markdown: kramdown
 gems: [jekyll-paginate]
 
@@ -28,12 +30,12 @@ menu:
   - page: 归档
     directory: archives/
     icon: icon-archive
-  - page: 关于
-    directory: about/
-    icon: icon-about
   - page: 历史
     directory: history/
     icon: icon-history
+  - page: 关于
+    directory: //konghy.cn
+    icon: icon-about
   - page: 订阅
     directory: feed.xml
     icon: icon-rss
