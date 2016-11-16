@@ -14,17 +14,17 @@ layout: base
   	{% endif %}
   	</a>
   </h2>
-  
-  <div class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</div>
-  
-  <div class="post-content">{{ post.excerpt }}</div>
-  
+
+  <div class="post-meta"><i class="icon-post-date"> {{ post.date | date: "%Y年%m月%d日" }}</i></div>
+
+  <div class="post-content">{{ post.content | strip_html | truncate:300 }}</div>
+
   <p class="readmore"><a href="{{ post.url | prepend: site.baseurl }}">阅读更多</a></p>
-  
+
 </div>
 {% endfor %}
 
-  
+
   <div class="page-navigator">
   {% if paginator.previous_page %}
   {% if paginator.page == 2 %}
@@ -35,7 +35,7 @@ layout: base
   {% else %}
     <!-- <span class="previous">上一页</span> -->
   {% endif %}
-  
+
   {% if paginator.next_page %}
     <a href="/{{ paginator.next_page }}" class="next">下一页</a>
   {% else %}

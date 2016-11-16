@@ -33,6 +33,9 @@ menu:
   - page: 历史
     directory: history/
     icon: icon-history
+  - page: 留言
+    directory: guestbook/
+    icon: icon-guestbook
   - page: 关于
     directory: //konghy.cn
     icon: icon-about
@@ -42,9 +45,20 @@ menu:
 
 # Link settings
 links: # 友情链接
-  - title: site-name1
-    url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
+  - title: Jekyll 博客系统
+    url: http://jekyllcn.com/
+  - title: 多说评论系统
+    url: http://duoshuo.com/
+  - title: 聚宽量化交易平台
+    url: https://www.joinquant.com/
+  - title: 卢松松博客
+    url: http://lusongsong.com/
+
+# Code hub settings
+codehub: # 友情链接
+  - title: Github
+    url: https://github.com/kuanghy
+  - title: Git@OSC
+    url: https://git.oschina.net/kuanghy
+  - title: Coding
+    url: https://coding.net/u/konghy

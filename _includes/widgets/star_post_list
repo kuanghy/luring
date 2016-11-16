@@ -1,0 +1,8 @@
+<div class="widget">
+    <div class="widget-title"><i class="icon-star"> 推荐文章</i></div>
+    <ul class="post-list">
+        <li class="post-list-item"><a class="post-list-link" href="/2016/09/01/linux-softwares/">Linux 下一些有用或者有趣的软件</a></li>
+        <li class="post-list-item"><a class="post-list-link" href="/2016/06/23/python3-new-feature/">Python3 的一些新特性</a></li>
+        <li class="post-list-item"><a class="post-list-link" href="/2016/09/26/python-optimize/">Python 性能优化技巧</a></li>
+    </ul>
+</div>

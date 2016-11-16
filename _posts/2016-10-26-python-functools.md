@@ -39,7 +39,7 @@ add_y(4)
 
 一个很实用的例子：
 
-```
+```python
 def json_serial_fallback(obj):
     """JSON serializer for objects not serializable by default json code"""
     if isinstance(obj, (datetime.datetime, datetime.date)):
