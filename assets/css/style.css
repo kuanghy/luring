@@ -242,6 +242,7 @@ a:focus {
 	line-height: 1.77;
 	color: #444;
 	padding-top: 20px;
+    padding-bottom: 1em;
 	text-align: justify;
 	text-justify: distribute;
 	word-break: break-all;
@@ -913,11 +914,11 @@ figure {  margin: 0; }
 /* icomoon icon fonts*/
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?i9xz5c');
-  src:  url('../fonts/icomoon.eot?i9xz5c#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?i9xz5c') format('truetype'),
-    url('../fonts/icomoon.woff?i9xz5c') format('woff'),
-    url('../fonts/icomoon.svg?i9xz5c#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?my3x4x');
+  src:  url('../fonts/icomoon.eot?my3x4x#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?my3x4x') format('truetype'),
+    url('../fonts/icomoon.woff?my3x4x') format('woff'),
+    url('../fonts/icomoon.svg?my3x4x#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -940,11 +941,21 @@ figure {  margin: 0; }
 .icon-post-tag:before {
   content: "\e907";
 }
+
 .icon-post-date:before {
   content: "\e908";
 }
+
 .icon-post-category:before {
   content: "\e909";
+}
+
+.icon-post-pre:before {
+  content: "\f0d9";
+}
+
+.icon-post-next:before {
+  content: "\f0da";
 }
 
 .icon-star:before {
@@ -1002,7 +1013,7 @@ figure {  margin: 0; }
 	margin-bottom: 20px;
 	padding: 10px;
 	white-space: nowrap;
-	border-top: 1px solid #eee;
+	border-top: 1px solid #C2C2C2;
 }
 
 .post-nav a {
