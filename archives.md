@@ -5,7 +5,7 @@ permalink: /archives/
 ---
 
 <div class="post">
-  <div class="post-list">
+  <div class="post-archive">
   {% for post in site.posts  %}
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}

@@ -11,7 +11,7 @@ permalink: /tags/
   {% endfor %}
   </ul>
 
-  <div class="post post-list">
+  <div class="post post-archive">
   {% for tag in site.tags %}
   <h3 id="{{ tag | first }}">{{ tag | first }}</h3>
   <ul>

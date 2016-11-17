@@ -399,18 +399,18 @@ a:focus {
 }
 
 /* for different pages starts*/
-.post-list {
+.post-archive {
 	font-size: 15px;
 	line-height: 2;
 	padding-bottom: .8em;
 }
 
-.post-list h2 {
+.post-archive h2 {
 	margin: 0;
 	font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 }
 
-.post-list .date {
+.post-archive .date {
 	padding-right: .7em;
 }
 
