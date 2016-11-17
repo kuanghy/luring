@@ -30,9 +30,9 @@ menu:
   - page: 归档
     directory: archives/
     icon: icon-archive
-  - page: 历史
-    directory: history/
-    icon: icon-history
+  - page: 标签
+    directory: tags/
+    icon: icon-tags
   - page: 留言
     directory: guestbook/
     icon: icon-guestbook

@@ -81,7 +81,8 @@ a:focus {
 }
 
 #header .site-name .description {
-	margin: .2em 0 0;
+    font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+	margin: .4em 0 .2em;
 	color: #999;
 }
 
@@ -388,56 +389,74 @@ a:focus {
 }
 
 #footer {
+    font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+    font-size: .9em;
 	padding: .8em 0 3.6em;
-	margin-top: 1em;
+	margin-top: 1.6em;
 	line-height: 1.5;
 	color: #999;
-}
-
-#footer span {
-	font-size: .9em;
+    text-align: center;
 }
 
 /* for different pages starts*/
-.post-archive {
+.post-list {
 	font-size: 15px;
 	line-height: 2;
 	padding-bottom: .8em;
 }
 
-.post-archive h2 {
+.post-list h2 {
 	margin: 0;
 	font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 }
 
-.post-archive .date {
+.post-list .date {
 	padding-right: .7em;
 }
 
 #categories {
-	padding: 0;
-	margin: 0;
+    margin-left: -20px;
 }
 
-#categories .category {
-	margin: 10px 0 20px 0;
-	text-align: center;
-}
-
-#categories .category a {
-	text-align: left;
+#categories li {
+	background-image: none;
+	list-style: none;
+	list-style-image: none;
 	display: inline-block;
-	border: 1px solid #ddd;
-	padding: 20px 40px;
-	min-width: 100px;
 }
 
-#categories .category a h3 {
-	margin: 0;
+#categories a {
+    margin-right: 1em;
 }
 
-#categories .category a:hover {
-	border-color: #888;
+#label_box {
+	line-height: 2.4em;
+    margin-bottom: 4em;
+}
+
+#label_box li {
+	background-image: none;
+	list-style: none;
+	list-style-image: none;
+	display: inline-block
+}
+
+#label_box a {
+	padding: 4px 3px;
+	background: #DBDBDB;
+	color: #555;
+	border-radius: 3px;
+	text-decoration: none;
+	border: 1px dashed #C2C2C2
+}
+
+#label_box a span {
+	vertical-align: super;
+	font-size: .8em
+}
+
+#label_box a:hover {
+	background-color: #BFBFBF
 }
 
 /* for different pages ends*/
@@ -695,160 +714,6 @@ div {
 	border-color: #444;
 }
 
-/* duoshuo style*/
-#ds-thread #ds-reset {
-	color: #555;
-}
-
-#ds-thread #ds-reset .ds-replybox {
-	margin-bottom: 30px;
-}
-
-#ds-thread #ds-reset .ds-replybox .ds-avatar, #ds-reset .ds-avatar img {
-	box-shadow: none;
-}
-
-#ds-thread #ds-reset .ds-textarea-wrapper {
-	border-color: #c7d4e1;
-	background: none;
-	border-top-right-radius: 3px;
-	border-top-left-radius: 3px;
-}
-
-#ds-thread #ds-reset .ds-textarea-wrapper textarea {
-	height: 60px;
-}
-
-#ds-reset .ds-rounded-top {
-	border-radius: 0;
-}
-
-#ds-thread #ds-reset .ds-post-toolbar {
-	box-sizing: border-box;
-	border: 1px solid #c7d4e1;
-	background: #fafafa;
-}
-
-#ds-thread #ds-reset .ds-post-options {
-	height: 40px;
-	border: none;
-	background: none;
-}
-
-#ds-thread #ds-reset .ds-toolbar-buttons {
-	top: 11px;
-}
-
-#ds-thread #ds-reset .ds-sync {
-	top: 5px;
-}
-
-#ds-thread #ds-reset .ds-post-button {
-	top: 4px;
-	right: 5px;
-	width: 90px;
-	height: 30px;
-	border: 1px solid #c5ced7;
-	border-radius: 3px;
-	background-image: linear-gradient(#fbfbfc, #f5f7f9);
-	color: #60676d;
-}
-
-#ds-thread #ds-reset .ds-post-button:hover {
-	background-position: 0 -30px;
-	color: #60676d;
-}
-
-#ds-thread #ds-reset .ds-comments-info {
-	padding: 10px 0;
-}
-
-#ds-thread #ds-reset .ds-sort {
-	display: none;
-}
-
-#ds-thread #ds-reset li.ds-tab a.ds-current {
-	border: none;
-	background: #fafafa;
-	color: #60676d;
-}
-
-#ds-thread #ds-reset li.ds-tab a.ds-current:hover {
-	background-color: #e9f0f7;
-	color: #60676d;
-}
-
-#ds-thread #ds-reset li.ds-tab a {
-	border-radius: 2px;
-	padding: 5px;
-}
-
-#ds-thread #ds-reset .ds-login-buttons p {
-	color: #999;
-	line-height: 36px;
-}
-
-#ds-thread #ds-reset .ds-login-buttons .ds-service-list li {
-	height: 28px;
-}
-
-#ds-thread #ds-reset .ds-service-list a {
-	background: none;
-	padding: 5px;
-	border: 1px solid;
-	border-radius: 3px;
-	text-align: center;
-}
-
-#ds-thread #ds-reset .ds-service-list a:hover {
-	color: #fff;
-	background: #666;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-weibo {
-	color: #fc9b00;
-	border-color: #fc9b00;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-weibo:hover {
-	background: #fc9b00;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-qq {
-	color: #60a3ec;
-	border-color: #60a3ec;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-qq:hover {
-	background: #60a3ec;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-renren {
-	color: #2e7ac4;
-	border-color: #2e7ac4;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-renren:hover {
-	background: #2e7ac4;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-douban {
-	color: #37994c;
-	border-color: #37994c;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-douban:hover {
-	background: #37994c;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-more-services {
-	border: none;
-}
-
-#ds-thread #ds-reset .ds-service-list .ds-more-services:hover {
-	background: none;
-}
-
 /* syntax highlight*/
 figure {  margin: 0; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
@@ -914,11 +779,11 @@ figure {  margin: 0; }
 /* icomoon icon fonts*/
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?my3x4x');
-  src:  url('../fonts/icomoon.eot?my3x4x#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?my3x4x') format('truetype'),
-    url('../fonts/icomoon.woff?my3x4x') format('woff'),
-    url('../fonts/icomoon.svg?my3x4x#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?jhbhm');
+  src:  url('../fonts/icomoon.eot?jhbhm#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?jhbhm') format('truetype'),
+    url('../fonts/icomoon.woff?jhbhm') format('woff'),
+    url('../fonts/icomoon.svg?jhbhm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -978,7 +843,7 @@ figure {  margin: 0; }
 	content: "\e904";
 }
 
-.icon-tags:before {
+.icon-edit:before {
 	content: "\e905";
 }
 
@@ -986,8 +851,8 @@ figure {  margin: 0; }
 	content: "\e906";
 }
 
-.icon-history:before {
-	content: "\e91f";
+.icon-tags:before {
+	content: "\e936";
 }
 
 .icon-guestbook:before {
@@ -1072,7 +937,7 @@ figure {  margin: 0; }
 	padding-left: 0;
 }
 
-/* table*/
+/* table */
 table {
 	margin: auto auto 15px;
 	width: 100%;

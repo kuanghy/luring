@@ -7,7 +7,7 @@
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | {{ site.subtitle}}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -76,6 +76,11 @@
             </div>
 
             <div class="widget">
+                <div class="widget-title"><i class="icon-edit"> 每日一句</i></div><ul></ul>
+                似此星辰非昨夜，为谁风露立中宵。   ── 黄景仁《绮怀》
+            </div>
+
+            <div class="widget">
                 <div class="widget-title"><i class="icon-new-post"> 最新文章({{ site.posts | size }})</i></div>
                 <ul class="post-list">
                 {% for post in site.posts limit:10 %}
@@ -89,7 +94,7 @@
                 <ul class="category-list">
                   {% for category in site.categories %}
                     <li class="category-list-item">
-                      <a class="category-list-link" href="{{ site.baseurl }}/category/{{ category[0] }}">{{ category[0] }} ({{ category[1] | size }})</a>
+                      <a class="category-list-link" href="{{ site.baseurl }}/category/#{{ category[0] }}">{{ category[0] }} ({{ category[1] | size }})</a>
                     </li>
                   {% endfor %}
                 </ul>
@@ -114,21 +119,14 @@
               {% endfor %}
               </ul>
             </div>
-
-            <div class="widget">
-                <div class="widget-title"><i class="icon-tags"> 标签云</i></div>
-                <div class="tagcloud">
-                  {% for tag in site.tags %}
-                    <a href="{{ site.baseurl }}/tag/{{ tag[0] }}" style="font-size: 15px;">{{ tag[0] }}</a>
-                  {% endfor %}
-                </div>
-            </div>
           </div>
         </div>
       </div>
 
-      <div id="footer">© 2016
-        <a href="/." rel="nofollow">{{ site.title }}.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
+      <div id="footer">
+        Copyright &copy; 2015-<span id="cur_year"></span> <a href="http://konghy.cn">Huoty</a> - All Rights Reserved.
+        Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="" target="_blank">Coding.net</a>
+        <script type="text/javascript">var cur_date = new Date();document.getElementById("cur_year").innerHTML = cur_date.getFullYear();</script>
         {% if site.beian %}
         <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/"> {{ site.beian }}.</a>
         {% endif %}
@@ -138,9 +136,9 @@
 
       <script src="/assets/js/jquery.min.js" type="text/javascript"></script>
       <script src="/assets/js/totop.js" type="text/javascript"></script>
-      <script src="/assets/js/fancybox.pack.js" type="text/javascript"></script>
-      <script src="/assets/js/jquery.fancybox.js" type="text/javascript"></script>
-      <link rel="stylesheet" href="/assets/css/jquery.fancybox.css" type="text/css">
+      <!-- <script src="/assets/js/fancybox.pack.js" type="text/javascript"></script> -->
+      <!-- <script src="/assets/js/jquery.fancybox.js" type="text/javascript"></script> -->
+      <!-- <link rel="stylesheet" href="/assets/css/jquery.fancybox.css" type="text/css"> -->
 
     </div>
 
