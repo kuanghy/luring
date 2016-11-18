@@ -349,6 +349,7 @@ a:focus {
 	margin-top: 25px;
 	padding: 25px 0;
 	font-size: 14px;
+	text-align: center;
 }
 
 .page-navigator a {
@@ -372,12 +373,17 @@ a:focus {
 	border-color: #999;
 }
 
+.page-navigator .page-number {
+	display: inline-block;
+	text-align: center;
+}
+
 .page-navigator span {
 	display: inline-block;
 	height: 25px;
 	line-height: 25px;
 	padding: 5px 20px;
-	float: left;
+	font-size: 13px;
 }
 
 .page-navigator span.pre {

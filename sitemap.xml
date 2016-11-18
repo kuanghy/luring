@@ -6,7 +6,7 @@ title : Sitemap
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
     <url>
-      <loc>{{ site.production_url }}{{ post.url }}</loc>
+      <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
       <changefreq>daily</changefreq>
       <lastmod>{{ post.date | date: "%Y-%m-%d"}}</lastmod>
       <priority>1.0</priority>
@@ -18,7 +18,7 @@ title : Sitemap
     {% if page.layout != 'feed' %}
     {% if page.group == 'navigation' %}
     <url>
-      <loc>{{ site.production_url }}{{ page.url | remove: 'index.html' }}</loc>
+      <loc>{{ page.url | remove: 'index.html' | prepend: site.baseurl | prepend: site.url }}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.80</priority>
     </url>
@@ -28,7 +28,7 @@ title : Sitemap
     {% endfor %}
 
     <url>
-      <loc>{{ site.production_url }}</loc>
+      <loc>{{ site.baseurl | prepend: site.url }}</loc>
       <changefreq>daily</changefreq>
       <priority>0.6</priority>
     </url>

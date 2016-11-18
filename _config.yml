@@ -17,8 +17,8 @@ markdown: kramdown
 gems: [jekyll-paginate]
 
 # Pageinate settings
-paginate: 10 # 分页大小
-paginate_path: ":num"
+paginate: 8 # 分页大小
+paginate_path: "page/:num/"
 
 # Search settings
 baidu_search: true
