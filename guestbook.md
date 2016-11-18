@@ -25,4 +25,4 @@ img {
 <b>或许你不经意留下的足迹，让我们成为了朋友</b>
 </div>
 
-{% include comments_duoshuuo %}
+{% include plugins/comments_duoshuuo %}
