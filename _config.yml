@@ -12,9 +12,11 @@ email: sudohuoty@gmail.com
 
 # Build settings
 permalink: /:year/:month/:day/:title/
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-markdown: kramdown
+exclude: ["README.md", "changelog.md"]
 gems: [jekyll-paginate]
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough", "no_intra_emphasis"]
 
 # Pageinate settings
 paginate: 8 # 分页大小
