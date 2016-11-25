@@ -10,7 +10,11 @@ layout: base
             <i class="icon-post-date">{{ page.date | date: "%b %-d, %Y" }}</i>
         </time> {% if page.categories.size > 0 %} |
         <span class="post-category">
-            <i class="icon-post-category"> {{ page.categories | array_to_sentence_string }}</i>
+            <i class="icon-post-category"> 
+            {% for page_category in page.categories %}
+                <a href="{{ site.baseurl }}/category/#{{ page_category }}">{{ page_category }}</a>
+            {% endfor %}
+            </i>
         </span> {% endif %} {% if page.tags.size > 0 %} |
         <span class="post-tag">
             <i class="icon-post-tag">
