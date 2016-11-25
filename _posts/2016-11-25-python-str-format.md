@@ -30,7 +30,7 @@ replacement_field ::= "{" [field_name] ["!" conversion] [":" format_spec] "}"
 
 #### 通过关键字参数
 
-使用关键参数是字符串中需要提供参数名：
+使用关键参数时字符串中需要提供参数名：
 
 ```python
 >>> "I am {name}, age is {age}".format(name="huoty", age=18)
@@ -212,7 +212,7 @@ Your email address was sudohuoty@gmail.com
 当在字符串中需要使用大括号时可以用大括号转义：
 
 ```python
->>> " The {} set is often represented as {{0}} ".format("empty")
+>>> " The {} set is often represented as { {0} } ".format("empty")
 ' The empty set is often represented as {0} '
 ```
 
