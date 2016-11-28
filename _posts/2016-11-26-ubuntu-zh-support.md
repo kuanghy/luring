@@ -38,6 +38,6 @@ zh_CN.GBK GBK
 
 或者：
 
-> sudo apt-get install `check-language-support -l zh-hans`
+> sudo apt-get install \`check-language-support -l zh-hans\`
 
 重启或者重新登录即可。
