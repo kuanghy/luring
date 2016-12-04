@@ -4,7 +4,7 @@
 # Author: Huoty <sudohuoty@gmail.com>
 # Script starts from here:
 
-workon blog > /dev/null 2>&1
+source /home/huoty/.virtualenvs/blog/bin/activate
 export PYTHONPATH="/home/huoty/luring/"
 export PYTHONUNBUFFERED=1
 python -m server -p 8800 -r _site/
