@@ -5,11 +5,18 @@
 # Script starts from here:
 
 # Update code
-cd ..
-env -i git checkout HEAD .
-
-# clint config:
-#   git remote add vultr ssh://huoty@vultrhost:/home/huoty/luring
+git --work-tree=/home/huoty/luring --git-dir=/home/huoty/luring/.git checkout -f HEAD
 
 # Build site
 jekyll build
+
+# clint config:
+#   git remote add vultr ssh://huoty@vultrhost:/home/huoty/luring
+#
+# server .git/config add:
+#   [receive]
+#       denyCurrentBranch = ignore
+#
+# install hook:
+#   cd .git/hooks/
+#   ln -s ../../tools/githook-post-receive.sh post-receive
