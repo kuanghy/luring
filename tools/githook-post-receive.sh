@@ -4,11 +4,13 @@
 # Author: Huoty <sudohuoty@gmail.com>
 # Script starts from here:
 
+PRO_IDR = /home/huoty/luring
+
 # Update code
-git --work-tree=/home/huoty/luring --git-dir=/home/huoty/luring/.git checkout -f HEAD
+git --work-tree=$PRO_IDR --git-dir=$PRO_IDR/.git checkout -f HEAD
 
 # Build site
-jekyll build
+jekyll build -s $PRO_IDR -d $PRO_IDR/_site/
 
 # clint config:
 #   git remote add vultr ssh://huoty@vultrhost:/home/huoty/luring
