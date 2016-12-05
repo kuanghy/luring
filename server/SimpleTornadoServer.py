@@ -117,7 +117,10 @@ class StaticFileHandler(tornado.web.StaticFileHandler):
         当请求的路径为目录时，重定向给 IndexHandler 处理
         """
         self.path = self.parse_url_path(path)
-        if os.path.isdir(self.get_absolute_path(self.root, self.path)):
+        local_path = self.get_absolute_path(self.root, self.path)
+        if not os.path.exists(local_path):
+            raise tornado.web.HTTPError(404)
+        elif os.path.isdir(local_path):
             self.redirect("/{path}/".format(path=self.path), permanent=True)
         else:
             super(StaticFileHandler, self).get(path, include_body)
