@@ -152,7 +152,7 @@ def main():
     from argparse import ArgumentParser
     parser = ArgumentParser(prog="SimpleTornadoServer",
                             description="A simple HTTP server based on tornado")
-    parser.add_argument("-H", "--host", default="localhost",
+    parser.add_argument("-H", "--host", default="127.0.0.1",
                         help="Host to bind to")
     parser.add_argument("-p", "--port", type=int, default=8000,
                         help="Port to listen on")
@@ -170,7 +170,7 @@ def main():
     else:
         log.setLevel(logging.INFO)
     enable_pretty_logging()
-    log.debug('cwd: %s' % os.path.abspath(options.root))
+    log.info('Serving site from local directory: %s' % os.path.abspath(options.root))
 
     handlers = [
         (r'(.*)/$', IndexHandler, dict(root=options.root, autoindex=options.autoindex)),
