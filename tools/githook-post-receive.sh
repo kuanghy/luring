@@ -4,7 +4,7 @@
 # Author: Huoty <sudohuoty@gmail.com>
 # Script starts from here:
 
-PRO_IDR = /home/huoty/luring
+PRO_IDR=/home/huoty/luring
 
 # Update code
 git --work-tree=$PRO_IDR --git-dir=$PRO_IDR/.git checkout -f HEAD
