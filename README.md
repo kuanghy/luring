@@ -41,5 +41,5 @@ Maupassant 最初是由 [Cho](https://github.com/pagecho/) 大神为 [Typecho](h
 + Jekyll: https://github.com/alafighting/maupassant-jekyll/
 
 ------
-Huoty<sudohuoty@gmail.com><br>
+Huoty(<sudohuoty@gmail.com>)<br>
 2016.11.17

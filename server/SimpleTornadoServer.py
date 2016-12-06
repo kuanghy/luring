@@ -49,7 +49,7 @@ class IndexHandler(tornado.web.RequestHandler):
                 with open(index, 'rb') as f:
                     self.write(f.read())
             elif self.autoindex:
-                self.write(self.generate_index(path))
+                self.write(self.generate_index())
             else:
                 self.write_404()
         self.finish()
