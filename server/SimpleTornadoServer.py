@@ -185,7 +185,7 @@ def main():
     )
 
     app = tornado.web.Application(handlers, **settings)
-    http_server = tornado.httpserver.HTTPServer(app)
+    http_server = tornado.httpserver.HTTPServer(app, xheaders=True)
     http_server.listen(options.port, options.host)
     log.info("The server is running at: http://{host}:{port}/".format(**vars(options)))
     signal.signal(signal.SIGINT, stop_server)
