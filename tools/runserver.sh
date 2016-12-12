@@ -9,7 +9,7 @@ set -e
 if type activate >/dev/null 2>&1; then
     source activate blog > /dev/null 2>&1
 elif type workon >/dev/null 2>&1; then
-    source workon blog > /dev/null 2>&1
+    workon blog > /dev/null 2>&1
 else
     echo "Error: Unable to switch working environment!"
     exit 1
