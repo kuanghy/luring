@@ -327,3 +327,7 @@ Mac 安装：
 -v 或 --no-vowels 不使用任何元音，以免意外生成让人讨厌的单词
 ```
 
+### Zeal
+
+[Zeal](https://zealdocs.org/) 是一个简单的离线 API 文档浏览器，仿照 [Dash](https://kapeli.com/dash)（一个 OSX 应用） 写成，能在 Linux 和 Windows 上使用。Linux 下安装和使用可以参考: [http://xmodulo.com/browse-search-api-documentation-offline-linux.html](http://xmodulo.com/browse-search-api-documentation-offline-linux.html)
+
