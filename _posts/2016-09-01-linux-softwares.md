@@ -331,3 +331,15 @@ Mac 安装：
 
 [Zeal](https://zealdocs.org/) 是一个简单的离线 API 文档浏览器，仿照 [Dash](https://kapeli.com/dash)（一个 OSX 应用） 写成，能在 Linux 和 Windows 上使用。Linux 下安装和使用可以参考: [http://xmodulo.com/browse-search-api-documentation-offline-linux.html](http://xmodulo.com/browse-search-api-documentation-offline-linux.html)
 
+### ack 
+
+[Ack](http://beyondgrep.com/) 是比 grep 更快的文本搜索工具
+
+### Ag
+
+[Ag](https://github.com/ggreer/the_silver_searcher) 是比 grep、ack 更快的搜索工具
+
+### ccat
+
+[Ccat](https://github.com/jingweno/ccat) 是 cat 的着色版本，可以对输出文本进行语法高亮
+
