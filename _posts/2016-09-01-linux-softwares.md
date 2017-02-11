@@ -343,3 +343,7 @@ Mac 安装：
 
 [Ccat](https://github.com/jingweno/ccat) 是 cat 的着色版本，可以对输出文本进行语法高亮
 
+### Insomnia
+
+[Insomnia](https://insomnia.rest/) 跨平台的、免费的 REST 客户端
+
