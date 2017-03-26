@@ -28,9 +28,11 @@ alias h3='history 30'
 ```
 
 [**注:** 当看到你要的命令后按回车键，就可以重新执行这条命令了]
-> $ cat /etc/redhat-release
 
-> Fedora release 9 (Sulphur)
+```
+$ cat /etc/redhat-release
+Fedora release 9 (Sulphur)
+```
 
 #### 3. 执行历史命令中的特定命令
 用 history 显示历史命令的时候，在每个命令前边都有一个编号，用 `！ + 编号` 可以重新执行该条命令。例如：

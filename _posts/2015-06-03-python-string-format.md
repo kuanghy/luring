@@ -183,6 +183,7 @@ There are 3 Python Quotation Symbols
 由于新式的字符串 Template 对象的引进使得 string 模块又重新活了过来，Template 对象有两个方法，substitute()和safe_substitute()。前者更为严谨，在key缺少的情况下它会报一个 KeyError 的异常出来，而后者在缺少 key 时，直接原封不动的把字符串显示出来.。
 
 示例：
+
 ```python
 >>> from string import Template
 >>> s = Template('There are ${howmany} ${lang} Quotation Symbols')

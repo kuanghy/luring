@@ -91,7 +91,8 @@ echo "Hello World!";
 ```
 
 再再然后是这样子的：
-```python
+
+```javascript
 <script type="text/javascript">
 	function button_clicked()
 	{

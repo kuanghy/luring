@@ -5,7 +5,13 @@ category: Python
 tags: python
 ---
 
-Python的time模块提供了各种操作时间的功能。在大多数的编程语言中，表示时间的方法有两种，一是时间戳。即从1970年1月1日00:00:00开始按秒计算的偏移量；二是该语言自己的数据结构。Python中表示时间的数据结构元组，共有九个元素, 即`(tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec, tm_wday, tm_yday, tm_isdst)`，每个元素分别表示如下含义：
+Python的time模块提供了各种操作时间的功能。在大多数的编程语言中，表示时间的方法有两种，一是时间戳。即从1970年1月1日00:00:00开始按秒计算的偏移量；二是该语言自己的数据结构。Python中表示时间的数据结构元组，共有九个元素, 即：
+
+```
+(tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec, tm_wday, tm_yday, tm_isdst)
+```
+
+每个元素分别表示如下含义：
 
 <div class="hblock"><pre>
 year (four digits, e.g. 1998)
@@ -26,6 +32,7 @@ DST (Daylight Savings Time) flag (-1, 0 or 1) 是否是夏令时
 
 
 ## 模块变量
+
 #### timezone
 当地时间与标准UTC时间的误差，以秒计
 

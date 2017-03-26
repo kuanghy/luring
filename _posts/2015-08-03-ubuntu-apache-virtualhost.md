@@ -26,13 +26,13 @@ tags: ubuntu apache
 Listen 80
 Listen 8888
 
-&lt;IfModule ssl_module&gt;
+<IfModule ssl_module>
     Listen 443
-&lt;/IfModule&gt;
+</IfModule>
 
-&lt;IfModule mod_gnutls.c&gt;
+<IfModule mod_gnutls.c>
     Listen 443
-&lt;/IfModule&gt;
+</IfModule>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
