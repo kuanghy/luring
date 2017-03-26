@@ -1,15 +1,15 @@
 ---
 layout: post
 title: "谈谈 Python 中的连接符（+、+=）"
-keywords: Python  connect
+keywords: Python connect 连接符
 description: "对于可变类型，+ 会创建一个新的对象，+= 则是原地操作，而对于不可变类型，两者没有区别"
 category: Python
-tags: Python  connect
+tags: python
 ---
 
 假设有下面一段代码：
 
-{% highlight python %}
+```python
 a = [1, 2, 3, 4]
 b = [5, 6, 7, 8, 9]
 c = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
@@ -20,7 +20,7 @@ for item in (a, b, c):
 print a
 print b
 print c
-{% endhighlight %}
+```
 
 这段代码的意思是，有三个列表，需要在长度不为 10 的列表尾部填充 0，让其长度变为10。输出如下：
 
@@ -32,7 +32,7 @@ print c
 
 这里没什么问题，一切正常。但是，现在变了需求，需要在长度不为 10 的列表的前面填充 0。那么，我们尝试做如下的改动：
 
-{% highlight python %}
+```python
 a = [1, 2, 3, 4]
 b = [5, 6, 7, 8, 9]
 c = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
@@ -43,7 +43,7 @@ for item in (a, b, c):
 print a
 print b
 print c
-{% endhighlight %}
+```
 
 直接来看一下输出：
 

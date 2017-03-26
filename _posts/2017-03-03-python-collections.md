@@ -4,22 +4,22 @@ title: "Python 模块简介 -- collections"
 keywords: Python collections namedtuple deque counter orderdict defaultdict chainmap
 description: "collections模块定义了一些扩展的数据类型"
 category:
-tags: Python collections
+tags: python
 ---
 
 Python 的内置数据数据类型包括 str, int, list, tuple, set, dict 等，有时候这些数据类型可能满足不了我们的需求。不过标准库的 collections 模块在这些内置数据类型的基础上，提供了几个额外的数据类型：
 
-类型|说明|备注
-:---|:---|:---
-namedtuple	| 命名元组，使用名字访问元素 | New in version 2.6.
-deque | 双端队列，可以快速的从头/尾两端添加或删除元素 | New in version 2.4.
-Counter | 计数器，用于对某项数据进行计数 | New in version 2.7.
-OrderedDict | 有序字典，按 key 对字典元素排序 | New in version 2.7.
-defaultdict | 带有默认值的字典 | New in version 2.5.
-ChainMap | 合并多个 map(dict)，但保持原数据结构 | New in version 3.3
-UserDict | 将字典包装起来使得创建字典的子类更容易 | 
-UserList | 列表对象的包装器 | 
-UserString |	字符串对象的包装器 | 
+| 类型        | 说明                                          | 备注                |
+|:------------|:----------------------------------------------|:--------------------|
+| namedtuple  | 命名元组，使用名字访问元素                    | New in version 2.6. |
+| deque       | 双端队列，可以快速的从头/尾两端添加或删除元素 | New in version 2.4. |
+| Counter     | 计数器，用于对某项数据进行计数                | New in version 2.7. |
+| OrderedDict | 有序字典，按 key 对字典元素排序               | New in version 2.7. |
+| defaultdict | 带有默认值的字典                              | New in version 2.5. |
+| ChainMap    | 合并多个 map(dict)，但保持原数据结构          | New in version 3.3  |
+| UserDict    | 将字典包装起来使得创建字典的子类更容易        |                     |
+| UserList    | 列表对象的包装器                              |                     |
+| UserString  | 字符串对象的包装器                            |                     |
 
 ## namedtuple
 
