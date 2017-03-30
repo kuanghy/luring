@@ -3,7 +3,7 @@ layout: post
 title: 博客搭建历程
 keywords: 博客 GitHub Jekyll Markdown
 category: 我的日志
-tags: 博客 Jekyll Markdown
+tags: 博客 jekyll markdown
 ---
 
 自从接触Web设计以来，就一直想搭建一个自己的独立博客。之前一直在用第三方的博客，我选择的是[网易](http://konghy.blog.163.com/)。网易博客很少有广告，而且可以自命名一个二级域名，其另一个产品 [LOFTER](http://konghy.lofter.com/) 也不错。那么为什么还要搭建一个独立博客呢，我大致总结了以下原因：

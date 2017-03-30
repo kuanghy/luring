@@ -272,7 +272,7 @@ ChainMap({'h': 5}, {'a': 1, 'd': 5, 'b': 8, 'e': 6}, {'b': 3, 'c': 4})
 
 ## UserDict、UserList、UserString
 
-这三个类是分别对 dict、list、str 三种数据类型的包装，其主要是为方便用户实现自己的数据类型。这是三个类都是基类，如果用户要扩展这三种类型，只需继承这三个类即可。
+这三个类是分别对 dict、list、str 三种数据类型的包装，其主要是为方便用户实现自己的数据类型。在 Python2 之前，这三个类分别位于 UserDict、UserList、UserString 三个模块中，需要用类似于 `from UserDict import UserDict` 的方式导入。在 Python3 之后则被挪到了 collections 模块中。这三个类都是基类，如果用户要扩展这三种类型，只需继承这三个类即可。
 
 
 ## 参考
