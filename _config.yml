@@ -49,19 +49,23 @@ menu:
 
 # Link settings
 links: # 友情链接
+  - title: Huoty's Opus
+    url: http://opus.konghy.cn
   - title: Jekyll 博客系统
     url: http://jekyllcn.com/
   - title: 多说评论系统
     url: http://duoshuo.com/
   - title: 聚宽量化交易平台
     url: https://www.joinquant.com/
-  - title: 卢松松博客
-    url: http://lusongsong.com/
   - title: 晚晴幽草轩
     url: http://jeffjade.com/
+  - title: 卢松松博客
+    url: http://lusongsong.com/
+  - title: 搜外SEO问答
+    url: http://ask.seowhy.com
 
 # Code hub settings
-codehub: # 友情链接
+codehub: # 代码仓库
   - title: Github
     url: https://github.com/kuanghy
   - title: Git@OSC
