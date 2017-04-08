@@ -37,10 +37,17 @@ tags: python
 
 ## 数据库
 
-- [motor](http://motor.readthedocs.io/) 为 Tornado 提供了一个基于回调和 Future 机制的非堵塞的MongoDB驱动程序
+- [MySQL-Python](http://mysql-python.sourceforge.net/) 对 MySQL C 驱动的封装，仅支持 Python2，该项目名称为[MySQLdb1](https://github.com/farcepest/MySQLdb1)
+- [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) 基于 MySQLdb1 项目，并添加对 Python3 的支持
+- [mysql-connector-python](https://dev.mysql.com/doc/connector-python/en/) MySQL 官方支持的纯 Python 驱动
+- [PyMySQL](https://github.com/PyMySQL/PyMySQL) MySQL 的一个纯 Python 接口
+- [Tornado-MySQL](https://github.com/PyMySQL/Tornado-MySQL) 基于 PyMySQL 并添加对 Tornado 的支持
 - [adb](https://github.com/ovidiucp/pymysql-benchmarks) 异步 mysql 库
 - [SQLAlchemy](http://www.sqlalchemy.org/) 提供了 SQL 工具包及对象关系映射(ORM)工具
 - [Peewee](http://peewee.readthedocs.io/en/latest/) 超级轻量的一个 ORM 框架
+- [pymongo](http://api.mongodb.com/python/current/index.html) MongoDB 官方支持的驱动程序
+- [motor](http://motor.readthedocs.io/) 为 Tornado 提供了一个基于回调和 Future 机制的非堵塞的 MongoDB 驱动程序
+- [redis-py](https://redis-py.readthedocs.io/en/latest/) Redis 的 Python 接口程序
 
 
 ## 打印输出
