@@ -2,7 +2,7 @@
 layout: post
 title: MySQL数据库操作基本命令简介
 category: 数据库
-tags: mysql
+tags: mysql 数据库
 ---
 
 MySQL是一个非常流行的小型关系型数据库管理系统。在数据库的管理上，我们一般会借住一些工具，常用的是phpMyAdmin。它是一个用PHP开发的基于Web方式架构在网站主机上的MySQL管理工具，支持中文，管理数据库非常方便。但有时候我们可能会无可避免的要用到命令行下的操作。这里记录一些基本的命令行操作命令以参考和备忘。
@@ -82,6 +82,24 @@ MySQL是一个非常流行的小型关系型数据库管理系统。在数据库
 **删除表:**
 
 > drop table 表名;
+
+**表字段的增删改:**
+
+修改字段属性：
+
+> alter table 表名 modify 字段名称 字段类型 [是否允许非空] comment '字段注释';
+
+改变字段名称：
+
+> alter table 表名 change 字段原名称 字段新名称 字段类型 [是否允许非空] comment '字段注释';
+
+添加字段：
+
+> alter table 表名 add 字段名称 字段类型 [是否允许非空] comment '字段注释';
+
+删除字段：
+
+> alter table 表名 drop column 字段名称;
 
 其他对数据库的相应操作使用 SQL 语句即可。
 
