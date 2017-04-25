@@ -109,6 +109,13 @@ tags: python
 - [Sanic](https://github.com/channelcat/sanic) 一个与 Flask 类似，基于 uvloop 的 web 框架，它能让 Python 更快速
 
 
+## Web Server
+
+- [Gunicorn](http://gunicorn.org/) Green Unicorn，是一个 WSGI 服务器，用来支持 Python 应用，被设计成运行于Nginx之后，轻量级、易于使用、并使用许多UNIX特性
+- [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) 用来构建全栈式的主机服务，既能当作独立的 web 路由器来运行，也能运行在一个完整 web 服务器（比如Nginx或Apache）之后
+- [Meinheld](https://github.com/mopemope/meinheld) 一个高性能的异步 WSGI Web 服务, 利用 greenlet 和 Picoev 实现异步 I/O
+
+
 ## 网络爬虫
 
 - [scrapy](https://scrapy.org/)
