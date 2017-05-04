@@ -7,7 +7,7 @@ category: Python
 tags: python
 ---
 
-## 实用工具
+## 工具
 
 - [attrs](https://pypi.python.org/pypi/attrs) Attributes Without Boilerplate
 - [assertpy](https://github.com/ActivisionGameScience/assertpy) assert 语句的替代品
@@ -69,7 +69,9 @@ tags: python
 - [PP](http://www.parallelpython.com/) （Parallel Python）是另外一个轻量级的 Python 并行服务
 - [Asyncoro](http://asyncoro.sourceforge.net/) 一个利用 Generator 实现分布式并发的 Python 框架
 - [APScheduler](http://apscheduler.readthedocs.io/en/latest/) 任务调度模块，一个 Python 定时任务框架
-- [mpi4py](http://pythonhosted.org/mpi4py/) mpi4py是一个构建在MPI之上的Python库，主要使用Cython编写
+- [mpi4py](http://pythonhosted.org/mpi4py/) 一个构建在MPI之上的Python库，主要使用Cython编写
+- [pyee](https://pyee.readthedocs.io) 一个 [node.js’s EventEmitter](https://nodejs.org/api/events.html) 的 Python 粗略实现
+- [threadpool](https://chrisarndt.de/projects/threadpool/) 一个比较老的线程池库，不太建议使用
 
 
 ## 命令行参数解析
