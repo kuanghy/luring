@@ -172,3 +172,11 @@ tags: python
 - [h5py](http://docs.h5py.org/)  将数据存储为高效且可压缩的HDF5格式
 - [fastcache](https://github.com/pbrady/fastcache) 用 C 实现的，更快的，兼容 Python2 和 Python3 的缓存模块
 - [PrettyPandas](http://prettypandas.readthedocs.io) 用 pandas Style API 来将DataFrames转换成适合展示的表格
+
+
+## 自然语言处理
+
+- [python-pinyin](https://github.com/mozillazg/python-pinyin) 将汉字转为拼音。可以用于汉字注音、排序、检索
+- [Pinyin2Hanzi](https://github.com/letiantian/Pinyin2Hanzi) 拼音转汉字，可以作为拼音输入法的转换引擎
+- [jieba](https://github.com/fxsjy/jieba)  中文分词组件
+- [thulac](http://thulac.thunlp.org/) 一个高效的中文词法分析工具包
