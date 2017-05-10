@@ -109,6 +109,7 @@ tags: python
 - [web.py](http://webpy.org/) 一款轻量级的 Python web 开发框架，简单、高效
 - [web2py](http://www.web2py.com/) 一种免费的、开源的 web 开发框架，用于敏捷地开发安全的、数据库驱动的 web 应用
 - [Sanic](https://github.com/channelcat/sanic) 一个与 Flask 类似，基于 uvloop 的 web 框架，它能让 Python 更快速
+- [hug](https://github.com/timothycrosley/hug) 旨在简化 Python RESET APIs 的开发，其本身并非一个网络框架，构建在 Falcon 的高性能 HTTP 库之上，意味着可以使用任何 wsgi 兼容的服务器(例如 gunicorn)将其部署到生产环境中
 
 
 ## Web Server
@@ -172,6 +173,9 @@ tags: python
 - [h5py](http://docs.h5py.org/)  将数据存储为高效且可压缩的HDF5格式
 - [fastcache](https://github.com/pbrady/fastcache) 用 C 实现的，更快的，兼容 Python2 和 Python3 的缓存模块
 - [PrettyPandas](http://prettypandas.readthedocs.io) 用 pandas Style API 来将DataFrames转换成适合展示的表格
+- [bcolz](https://github.com/Blosc/bcolz) 列式存储的数据持久化方案，压缩率高而且查询速度快
+- [odo](https://github.com/blaze/odo) 在各种数据格式之间高效的迁移数据。这里的数据格式既包括内存中的数据结构，比如：列表、集合、元组、迭代器、numpy中的ndarray、pandas中的DataFrame、dynd中的array，以及上述各类的流式序列。也包括存在于Python程序之外的持久化数据，比如：CSV、JSON、行定界的JSON，以及以上各类的远程版本，HDF5 (标准格式与Pandas格式皆可)、 BColz、 SAS、 SQL 数据库 ( SQLAlchemy支持的皆可)、 Mongo 等
+- [Blaze](https://github.com/blaze/blaze) 用于处理数据库和分析查询的阵列技术。是下一代的 [NumPy](http://www.numpy.org/)。用于处理分布式的各种不同数据源的计算
 
 
 ## 自然语言处理
