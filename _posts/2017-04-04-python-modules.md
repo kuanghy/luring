@@ -176,6 +176,7 @@ tags: python
 - [bcolz](https://github.com/Blosc/bcolz) 列式存储的数据持久化方案，压缩率高而且查询速度快
 - [odo](https://github.com/blaze/odo) 在各种数据格式之间高效的迁移数据。这里的数据格式既包括内存中的数据结构，比如：列表、集合、元组、迭代器、numpy中的ndarray、pandas中的DataFrame、dynd中的array，以及上述各类的流式序列。也包括存在于Python程序之外的持久化数据，比如：CSV、JSON、行定界的JSON，以及以上各类的远程版本，HDF5 (标准格式与Pandas格式皆可)、 BColz、 SAS、 SQL 数据库 ( SQLAlchemy支持的皆可)、 Mongo 等
 - [Blaze](https://github.com/blaze/blaze) 用于处理数据库和分析查询的阵列技术。是下一代的 [NumPy](http://www.numpy.org/)。用于处理分布式的各种不同数据源的计算
+- [joblib](http://pythonhosted.org/joblib/) 为Python函数提供轻量级管道任务(pipeline job)服务的一系列工具，包括透明磁盘IO缓冲、快速序列化、简单并行化运行、日志服务等，为大数据集的快速可靠处理进行了优化，特别针对numpy数组的处理进行了优化
 
 
 ## 自然语言处理
