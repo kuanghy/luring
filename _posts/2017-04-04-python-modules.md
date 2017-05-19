@@ -185,3 +185,10 @@ tags: python
 - [Pinyin2Hanzi](https://github.com/letiantian/Pinyin2Hanzi) 拼音转汉字，可以作为拼音输入法的转换引擎
 - [jieba](https://github.com/fxsjy/jieba)  中文分词组件
 - [thulac](http://thulac.thunlp.org/) 一个高效的中文词法分析工具包
+
+## 性能优化
+
+- [numba](http://numba.pydata.org/) 使用 Just-in-Time(JIT) 即时编译器的方式加速代码，其 Python 源码通过 LLVMPy 生成 JIT 后的 so文件来加速
+- [cython](http://cython.org/) 是 Python 的 C 语言扩展。准确说 Cython 是单独的一门语言，专门用来写在 Python 里面 import 用的扩展库。实际上 Cython 的语法基本上跟 Python 一致，而 Cython 有专门的编译器：先将 Cython 代码转变成 C(自动加入了一大堆的 C-Python API)，然后使用 C 编译器编译出最终的 Python 可调用的模块。不过 Cython 的缺点是，你并不能真正编写 Python 代码
+- [pypy](https://pypy.org/) 使用 Python 实现的解释器，它使用了 Just-in-Time(JIT) 即时编译器，即动态编译器，与静态编译器（如gcc,java等）不同，它是利用程序运行的过程的数据进行优化
+- [Pyston](https://github.com/dropbox/pyston) 是一款 Dropbox 推出的新的基于 JIT 的 Python 实现，使用 LLVM 编译器实现代码解析与转换
