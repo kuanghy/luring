@@ -79,6 +79,7 @@ tags: python
 - [Docopt](http://docopt.org/) 忘了 optparse 和 argparse 吧，使用 docstring 来构建优雅的、高可读性、复杂（如果你有这个需要）的命令行界面。在我看来这是2013年诞生的最好的库
 - [Click](http://click.pocoo.org) 用于快速创建命令行工具
 - [clize](http://clize.readthedocs.io/en/stable/) 利用装饰器将函数转换成命令行解析器
+- [python-fire](https://github.com/google/python-fire) Google 开源的一个可从任何 Python 代码自动生成命令行接口（CLI）的库,是开发和调试非常有用的工具，只需将想要在命令行显示的功能写为函数/模块/类，就可以在命令行模式下调用
 
 
 ## HTTP
