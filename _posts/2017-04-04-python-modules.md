@@ -13,6 +13,7 @@ tags: python
 - [assertpy](https://github.com/ActivisionGameScience/assertpy) assert 语句的替代品
 - [affirm](https://github.com/elifiner/affirm) 用于更好的替换 assert 语句
 - [decorator](https://github.com/micheles/decorator) 简化 decorator 的使用难度而开发的模块
+- [isort](https://github.com/timothycrosley/isort) 可自动对 Python 的 import 语句进行排序和分段。可将大量的 import 结构转成非常适合阅读的排版
 
 ## 日志处理
 
