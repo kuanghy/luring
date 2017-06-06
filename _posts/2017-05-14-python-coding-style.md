@@ -244,7 +244,7 @@ if __name__ == '__main__':
 
 ## 九、编码建议
 
-- 1、尽可能使用 'is' 和 'is not' 取代 '=='，比如 if x is not None 要优于 if x。
+- 1、尽可能使用 'is' 和 'is not' 取代 '=='，比如 if x is not None 要优于 if x != None，另外用 if x 效率更高。
 
 - 2、用 "is not" 代替 "not ... is"，前者的可读性更好。
 
