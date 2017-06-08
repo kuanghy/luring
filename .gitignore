@@ -16,3 +16,5 @@ sdist/
 *.egg
 
 .DS_Store
+
+.ftpconfig

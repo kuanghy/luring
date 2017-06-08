@@ -10,7 +10,7 @@ layout: base
             <i class="icon-post-date">{{ page.date | date: "%b %-d, %Y" }}</i>
         </time> {% if page.categories.size > 0 %} |
         <span class="post-category">
-            <i class="icon-post-category"> 
+            <i class="icon-post-category">
             {% for page_category in page.categories %}
                 <a href="{{ site.baseurl }}/category/#{{ page_category }}">{{ page_category }}</a>
             {% endfor %}
@@ -28,6 +28,12 @@ layout: base
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+  </div>
+
+  <div id="donate">
+    <a href="/donate/" style="text-decoration: none">
+      <button>打赏</button>
+    </a>
   </div>
 
   {% include plugins/share_button %}
