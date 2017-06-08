@@ -188,6 +188,16 @@ tags: python
 - [jieba](https://github.com/fxsjy/jieba)  中文分词组件
 - [thulac](http://thulac.thunlp.org/) 一个高效的中文词法分析工具包
 
+
+## 代码与性能测试
+
+- [pytest](https://docs.pytest.org/) 一个成熟的全功能的 Python 测试框架
+- [mock](https://pypi.python.org/pypi/mock) 用来创建和管理模拟对象，以完成单元测试，在 Python 3.x 中已被集成到 unittest 标准库
+- [Fudge](https://github.com/fudge-py/fudge) 是一个类似于 Java 中的 JMock 的纯 python 的 mock 测试模块，主要功能就是可以伪造对象，替换代码中真实的对象，来完成测试
+- [HTMLTestRunner](https://pypi.python.org/pypi/HTMLTestRunner) 是 Python 标准库 unittest 单元测试框架的一个扩展，用来生成 HTML 测试报告
+- [Locust](http://locust.io/) 是一个 Python 的性能测试工具，可以通过写 Python 脚本的方式来对 web 接口进行负载测试
+
+
 ## 性能优化
 
 - [numba](http://numba.pydata.org/) 使用 Just-in-Time(JIT) 即时编译器的方式加速代码，其 Python 源码通过 LLVMPy 生成 JIT 后的 so文件来加速
