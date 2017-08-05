@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git rebase 与 master 的区别"
+title: "Git rebase 与 merge 的区别"
 keywords: git rebase master
 description: "git rebase 与 git merge 的区别在于合并是提交历史处理方式不同"
 category: 计算机科学
