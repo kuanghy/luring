@@ -3,7 +3,7 @@ layout: post
 title: "Python 编码风格参考"
 keywords: Python 编码 编码风格 风格参考 编码规范
 description: "代码除了用来运行外，更多的是用来读。本文仅是一个 Python 编码风格的参考"
-category: python
+category: Python
 tags: python
 ---
 
