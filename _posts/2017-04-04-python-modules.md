@@ -9,12 +9,14 @@ tags: python
 
 ## 工具
 
+- [six](https://pypi.python.org/pypi/six) Python 2 和 3 的兼容库，用于编写 Python2 和 3 兼容的代码
 - [attrs](https://pypi.python.org/pypi/attrs) Attributes Without Boilerplate
 - [assertpy](https://github.com/ActivisionGameScience/assertpy) assert 语句的替代品
 - [affirm](https://github.com/elifiner/affirm) 用于更好的替换 assert 语句
 - [decorator](https://github.com/micheles/decorator) 简化 decorator 的使用难度而开发的模块
 - [isort](https://github.com/timothycrosley/isort) 可自动对 Python 的 import 语句进行排序和分段。可将大量的 import 结构转成非常适合阅读的排版
 - [fuzzyfinder](https://github.com/amjith/fuzzyfinder) 10 行代码写的模糊查询
+- [interruptingcow](https://pypi.python.org/pypi/interruptingcow) 一个 watchdog，用于中断长时间运行的代码，也就是给代码加上 timeout 功能
 
 ## 日志处理
 
