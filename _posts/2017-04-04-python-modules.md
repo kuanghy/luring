@@ -155,6 +155,10 @@ tags: python
 
 - [Delorean](http://delorean.readthedocs.io/en/latest/quickstart.html) 用它处理日期和时间非常方便。设置时区，截取到秒、分、小时，甚至使用特定步骤从一个日期进到另一个日期
 - [Arrow](http://crsmithdev.com/arrow/) 提供了合理的、友好的方式来创建、控制、格式化、转换 Python 的日期、时间和时间戳
+- [Pendulum](https://pendulum.eustace.io) 在标准库的基础之上，提供了一个更简洁，更易于使用的 API
+- [dateutil](http://labix.org/python-dateutil) 是 datetime 标准库的一个扩展库，几乎支持以所有字符串格式对日期进行通用解析，日期计算灵活，内部数据更新及时
+- [moment](https://github.com/zachwill/moment) 用于处理日期/时间的 Python 库，设计灵感同样是来源于 moment.js 和 requests ，设计理念源自 Times Python 模块
+- [when.py](http://whenpy.rtfd.org/) 提供对用户非常友好的特性来帮助执行常见的日期和时间操作
 
 
 ## Excel
