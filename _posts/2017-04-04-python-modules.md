@@ -7,7 +7,7 @@ category: Python
 tags: python
 ---
 
-## 工具
+## 基础库
 
 - [six](https://pypi.python.org/pypi/six) Python 2 和 3 的兼容库，用于编写 Python2 和 3 兼容的代码
 - [attrs](https://pypi.python.org/pypi/attrs) Attributes Without Boilerplate
@@ -17,6 +17,7 @@ tags: python
 - [isort](https://github.com/timothycrosley/isort) 可自动对 Python 的 import 语句进行排序和分段。可将大量的 import 结构转成非常适合阅读的排版
 - [fuzzyfinder](https://github.com/amjith/fuzzyfinder) 10 行代码写的模糊查询
 - [interruptingcow](https://pypi.python.org/pypi/interruptingcow) 一个 watchdog，用于中断长时间运行的代码，也就是给代码加上 timeout 功能
+
 
 ## 日志处理
 
@@ -63,6 +64,14 @@ tags: python
 - [termcolor](https://pypi.python.org/pypi/termcolor) 输出着色
 - [blessings](https://pypi.python.org/pypi/blessings) 输出着色
 - [hues](https://github.com/prashnts/hues) 输出着色，同时可以用来代替日志模块
+
+
+# 算法和设计模式
+
+- [https://github.com/nryoung/algorithms](https://github.com/nryoung/algorithms) 算法和数据结构库
+- [https://github.com/tylerlaberge/PyPattyrn.git](https://github.com/tylerlaberge/PyPattyrn.git) 一个实现了常见设计模式的简单且有效的 Python 库
+- [https://github.com/faif/python-patterns](https://github.com/faif/python-patterns) 设计模式和惯用法收集
+- [https://github.com/grantjenks/sorted_containers](https://github.com/grantjenks/sorted_containers) 高效的，纯 Python 实现的 SortedList、SortedDict 和 SortedSet 类型
 
 
 ## 并行计算、分布式、任务调度
