@@ -17,6 +17,7 @@ tags: python
 - [isort](https://github.com/timothycrosley/isort) 可自动对 Python 的 import 语句进行排序和分段。可将大量的 import 结构转成非常适合阅读的排版
 - [fuzzyfinder](https://github.com/amjith/fuzzyfinder) 10 行代码写的模糊查询
 - [interruptingcow](https://pypi.python.org/pypi/interruptingcow) 一个 watchdog，用于中断长时间运行的代码，也就是给代码加上 timeout 功能
+- [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) 字符串模糊匹配工具
 
 
 ## 日志处理
@@ -203,6 +204,7 @@ tags: python
 - [Pinyin2Hanzi](https://github.com/letiantian/Pinyin2Hanzi) 拼音转汉字，可以作为拼音输入法的转换引擎
 - [jieba](https://github.com/fxsjy/jieba)  中文分词组件
 - [thulac](http://thulac.thunlp.org/) 一个高效的中文词法分析工具包
+- [SnowNLP](https://github.com/isnowfy/snownlp) 处理中文文本的库
 
 
 ## 代码与性能测试
