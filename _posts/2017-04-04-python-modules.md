@@ -18,6 +18,8 @@ tags: python
 - [fuzzyfinder](https://github.com/amjith/fuzzyfinder) 10 行代码写的模糊查询
 - [interruptingcow](https://pypi.python.org/pypi/interruptingcow) 一个 watchdog，用于中断长时间运行的代码，也就是给代码加上 timeout 功能
 - [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) 字符串模糊匹配工具
+- [py](https://github.com/pytest-dev/py) 一个开发支持工具
+- [faker](https://github.com/joke2k/faker) 一个假数据生成库
 
 
 ## 日志处理
