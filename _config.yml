@@ -13,7 +13,7 @@ email: sudohuoty@gmail.com
 # Build settings
 permalink: /:year/:month/:day/:title/
 exclude: ["README.md", "changelog.md", "server", "tools"]
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough", "no_intra_emphasis"]
@@ -53,8 +53,6 @@ links: # 友情链接
     url: http://opus.konghy.cn
   - title: Jekyll 博客系统
     url: http://jekyllcn.com/
-  - title: 多说评论系统
-    url: http://duoshuo.com/
   - title: 聚宽量化交易平台
     url: https://www.joinquant.com/
   - title: 晚晴幽草轩
@@ -63,8 +61,6 @@ links: # 友情链接
     url: http://lusongsong.com/
   - title: 搜外SEO问答
     url: http://ask.seowhy.com
-  - title: Seay博客
-    url: http://www.cnseay.com/
 
 # Code hub settings
 codehub: # 代码仓库
