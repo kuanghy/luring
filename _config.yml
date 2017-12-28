@@ -16,7 +16,12 @@ exclude: ["README.md", "changelog.md", "server", "tools"]
 plugins: [jekyll-paginate]
 markdown: redcarpet
 redcarpet:
-    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough", "no_intra_emphasis"]
+    extensions: ["fenced_code_blocks",
+                 "tables",
+                 "highlight",
+                 "strikethrough",
+                 "no_intra_emphasis",
+                 "with_toc_data"]
 
 # Pageinate settings
 paginate: 8 # 分页大小
