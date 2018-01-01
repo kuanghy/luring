@@ -845,6 +845,10 @@ figure {  margin: 0; }
 	content: "\e903";
 }
 
+.icon-post-toc:before {
+	content: "\e903";
+}
+
 .icon-code-hub:before {
 	content: "\e904";
 }
@@ -990,4 +994,14 @@ table tr:nth-child(2n) {
 
 #donate button:hover {
 	background-color: #878787;
+}
+
+.hide {
+    display: none;
+}
+
+.post-toc {
+    &>ul {
+        overflow: auto;
+    }
 }
