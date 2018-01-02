@@ -69,7 +69,7 @@ tags: python
 - [hues](https://github.com/prashnts/hues) 输出着色，同时可以用来代替日志模块
 
 
-# 算法和设计模式
+## 算法和设计模式
 
 - [https://github.com/nryoung/algorithms](https://github.com/nryoung/algorithms) 算法和数据结构库
 - [https://github.com/tylerlaberge/PyPattyrn.git](https://github.com/tylerlaberge/PyPattyrn.git) 一个实现了常见设计模式的简单且有效的 Python 库
