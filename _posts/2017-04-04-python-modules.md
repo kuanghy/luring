@@ -20,6 +20,8 @@ tags: python
 - [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) 字符串模糊匹配工具
 - [py](https://github.com/pytest-dev/py) 一个开发支持工具
 - [faker](https://github.com/joke2k/faker) 一个假数据生成库
+- [pipenv](https://github.com/pypa/pipenv) Python Development Workflow for Humans,相当于是环境管理和包管理二合一，由 Kenneth Reitz （Requests 的作者 ）编写，现在移交给 Python 官方来维护，提供比 pip 体验更好的开发包管理
+- [flashtext](https://github.com/vi3k6i5/flashtext) 快速进行大规模语料库的文本搜索与替换
 
 
 ## 日志处理
@@ -104,6 +106,7 @@ tags: python
 - [builtwith](https://pypi.python.org/pypi/builtwith/) 识别网站所使用技术
 - [whois](https://pypi.python.org/pypi/python-whois) 域名公共查询工具：[Whois](http://whois.chinaz.com)
 - [robotparser](https://docs.python.org/3.5/library/urllib.robotparser.html) 标准库，解析 robots.txt 文件
+- [equestium](https://github.com/tryolabs/requestium) 是 Requests, Selenium 和 Parsel 的结合体，结合了 Chrome 59 以后的 headless 无头特性（代替了 phantomjs）
 
 
 ## HTML/XML
