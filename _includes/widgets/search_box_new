@@ -1,115 +1,76 @@
 <div class="widget">
-    <form class="search-form">
-      <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+    <form id="search-form" class="search-form">
+      <input id="query" type="text" placeholder="Search" class="search-form-input">
     </form>
 </div>
 <script type="text/javascript">
-$(function () {
-    var query = getQuery(["q", "t", "a", "d"]);
+$(document).ready(function() {
 
-    var targets;
-    switch (query.key) {
-        case "t":
-            targets = ["tags"];
-            break;
-        case "a":
-            targets = ["author"];
-            break;
-        case "d":
-            targets = ["date"];
-            break;
-        case "q":
-        default:
-            targets = ["title", "tags", "author", "url", "date", "content"];
-            break;
+    function find_posts(words, posts_data) {
+        var matched_posts = [];
+
+        posts_data.forEach(function(post) {
+            var post_tags = post["tags"].join(" ");
+            var content = (new Array(post["title"], post_tags)).join(" ");
+            words.forEach(function (word) {
+                if (word === null || word === undefined || word == "") {
+                    return;  // continue
+                }
+                var regex = new RegExp(word, 'i');
+                if (content.match(regex) != null) {
+                    matched_posts.push(post);
+                }
+            });
+        });
+
+        return matched_posts;
     }
-    showPosts(query.words, targets);
 
-    if (query.key == "q") {
-        $("#search").val(query.query).focus();
-    }
-});
-
-function getQuery(keys)
-{
-    var query = "";
-    var key = "";
-    var words = [];
-
-    keys.forEach(function (queryKey) {
-        var regex = RegExp("[?&]" + queryKey + "=([^&]+)", 'i');
-        var matched;
-        if (matched = window.location.search.match(regex)) {
-            query = decodeURIComponent(matched[1]).replace(/(　| )+/g, ' ');
-            words = query.split(' ');
-            key = queryKey;
-            return false;  // break;
+    function show_posts(posts) {
+        var html = '';
+        if (posts.length > 0) {
+            for (var i = 0; i < posts.length; i++) {
+                post = posts[i];
+                html += '<div class="post">';
+                html += '<h2 class="post-title">';
+                html += '<a href="' + post.url + '">' + post.title + '</a>';
+                html += '</h2>';
+                html += '<div class="post-meta"><i class="icon-post-date">';
+                html += ' ' + post.date;
+                html += '</i></div>';
+                html += '<div class="post-content">' + post.summary + '</div>';
+                html += '<p class="readmore">';
+                html += '<a href="' + post.url + '">阅读更多</a>';
+                html += '</p>';
+                html += '</div>';
+            }
+        } else {
+            html += "<h4>您输入的关键词没有搜索结果，请更换关键词！ O(∩_∩)O~</h4>"
         }
-        return true;  // continue;
-    });
+        $('.content_container').html(html);
+        $('.content_container').show();
+    }
 
-    return { query: query, key: key, words: words };
-}
+    $('#search-form').submit(function() {
+        var query = $('#query').val();
+        var words = query.split(" ")
 
-function showPosts(words, targets)
-{
-    var getJson = function () {
+        $('#query').blur().attr('disabled', true);
+        $('.content_container').hide();
 
-        var dfd = $.Deferred();
         $.ajax({
-            url: baseurl + "/posts.json",
+            url: "/assets/data/posts.json",
             dataType: "json",
             timeout: 6000,  // 6 sec
-            success: function (posts) {
-                var matchedPosts = [];
-                posts.forEach(function (post) {
-
-                    // concatenate target fields as a string.
-                    var searchee = "";
-                    for (var i = 0; i < targets.length; i++) {
-                        var target = post[targets[i]];
-                        var targetString = "";
-                        if (target instanceof Array) {
-                            for (var j = 0; j < target.length; j++) {
-                                targetString += target[j];
-                            }
-                        } else if (typeof target == "object") {
-                            for (key in target) {
-                                targetString += target[key];
-                            }
-                        } else {
-                            targetString = target;
-                        }
-                        searchee += targetString;
-                    }
-
-                    // matching.
-                    var matched = false;
-                    words.forEach(function (word) {
-                        var regex = new RegExp(word, 'i');
-                        if (searchee.match(regex) != null) {
-                            matched = true;
-                            return false;  // break;
-                        }
-                        return true;  // continue;
-                    });
-
-                    if (matched) {
-                        matchedPosts.push(post);
-                    }
-                });
-
-                dfd.resolve(matchedPosts);
+            success: function(data) {
+                matched_posts = find_posts(words, data);
+                show_posts(matched_posts);
             }
         });
 
-        return dfd.promise();
-    };
+        $('#query').blur().attr('disabled', false);
 
-    getJson().then(function (matchedPosts) {
-        matchedPosts.forEach(function (post) {
-            $("#search-results").find("#" + post.id).show();
-        });
+        return false;
     });
-}
+});
 </script>
