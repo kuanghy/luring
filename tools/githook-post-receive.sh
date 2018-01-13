@@ -10,7 +10,7 @@ PRO_IDR=/home/huoty/luring
 git --work-tree=$PRO_IDR --git-dir=$PRO_IDR/.git checkout -f HEAD
 
 # Build site
-jekyll build -s $PRO_IDR -d $PRO_IDR/_site/
+jekyll build -s $PRO_IDR -d /home/server/blog
 
 # clint config:
 #   git remote add vultr ssh://huoty@vultrhost:/home/huoty/luring

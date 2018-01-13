@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 学习札记篇一
-keywords: adduser vim shell
+keywords: adduser vim shell zenity inno
 category: 学习札记
 tags: 札记
 ---

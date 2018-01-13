@@ -2,6 +2,7 @@
 layout: post
 title: Python 的字符串格式化操作
 category: Python
+keywords: Python string str 字符串 格式化
 tags: python
 ---
 

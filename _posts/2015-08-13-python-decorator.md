@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python 函数式编程、装饰器以及一些相关概念简介
-keywords: python 函数式编程 装饰器
+keywords: python 函数式编程 装饰器 闭包 高阶函数 decorator
 category: Python
 tags: python
 ---
