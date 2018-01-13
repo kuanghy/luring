@@ -7,4 +7,4 @@
 source /home/huoty/.virtualenvs/blog/bin/activate
 export PYTHONPATH="/home/huoty/luring/"
 export PYTHONUNBUFFERED=1
-exec python -m server -p 8800 -r /home/huoty/luring/_site/
+exec python -m server -p 8000 -r /home/huoty/luring/_site/
