@@ -10,8 +10,7 @@ $(document).ready(function() {
         var matched_posts = [];
 
         posts_data.forEach(function(post) {
-            var post_tags = post["tags"].join(" ");
-            var content = (new Array(post["title"], post_tags)).join(" ");
+            var content = (new Array(post["title"], post["keywords"])).join(" ");
             words.forEach(function (word) {
                 if (word === null || word === undefined || word == "") {
                     return;  // continue
