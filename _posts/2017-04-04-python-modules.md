@@ -7,7 +7,7 @@ category: Python
 tags: python
 ---
 
-## 基础库
+## 基础库和工具
 
 - [six](https://pypi.python.org/pypi/six) Python 2 和 3 的兼容库，用于编写 Python2 和 3 兼容的代码
 - [attrs](https://pypi.python.org/pypi/attrs) Attributes Without Boilerplate
@@ -22,6 +22,7 @@ tags: python
 - [faker](https://github.com/joke2k/faker) 一个假数据生成库
 - [pipenv](https://github.com/pypa/pipenv) Python Development Workflow for Humans,相当于是环境管理和包管理二合一，由 Kenneth Reitz （Requests 的作者 ）编写，现在移交给 Python 官方来维护，提供比 pip 体验更好的开发包管理
 - [flashtext](https://github.com/vi3k6i5/flashtext) 快速进行大规模语料库的文本搜索与替换
+- [Eel](https://github.com/ChrisKnott/Eel) 一个小型库，用于制作简单的类似 [Electron](https://electronjs.org/) 的离线 HTML/JS GUI 应用程序
 
 
 ## 日志处理
@@ -69,6 +70,7 @@ tags: python
 - [termcolor](https://pypi.python.org/pypi/termcolor) 输出着色
 - [blessings](https://pypi.python.org/pypi/blessings) 输出着色
 - [hues](https://github.com/prashnts/hues) 输出着色，同时可以用来代替日志模块
+- [better-exceptions](https://github.com/Qix-/better-exceptions) 以更友好的形式展示异常信息
 
 
 ## 算法和设计模式
@@ -174,6 +176,7 @@ tags: python
 - [dateutil](http://labix.org/python-dateutil) 是 datetime 标准库的一个扩展库，几乎支持以所有字符串格式对日期进行通用解析，日期计算灵活，内部数据更新及时
 - [moment](https://github.com/zachwill/moment) 用于处理日期/时间的 Python 库，设计灵感同样是来源于 moment.js 和 requests ，设计理念源自 Times Python 模块
 - [when.py](http://whenpy.rtfd.org/) 提供对用户非常友好的特性来帮助执行常见的日期和时间操作
+- [maya](https://github.com/kennethreitz/maya) 主要为了解决解析网站时间数据的问题
 
 
 ## Excel
