@@ -23,6 +23,7 @@ tags: python
 - [pipenv](https://github.com/pypa/pipenv) Python Development Workflow for Humans,相当于是环境管理和包管理二合一，由 Kenneth Reitz （Requests 的作者 ）编写，现在移交给 Python 官方来维护，提供比 pip 体验更好的开发包管理
 - [flashtext](https://github.com/vi3k6i5/flashtext) 快速进行大规模语料库的文本搜索与替换
 - [Eel](https://github.com/ChrisKnott/Eel) 一个小型库，用于制作简单的类似 [Electron](https://electronjs.org/) 的离线 HTML/JS GUI 应用程序
+- [bidict](https://github.com/jab/bidict) 双向查询字典，可以通过 value 查询 key
 
 
 ## 日志处理
