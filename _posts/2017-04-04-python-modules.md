@@ -72,6 +72,8 @@ tags: python
 - [blessings](https://pypi.python.org/pypi/blessings) 输出着色
 - [hues](https://github.com/prashnts/hues) 输出着色，同时可以用来代替日志模块
 - [better-exceptions](https://github.com/Qix-/better-exceptions) 以更友好的形式展示异常信息
+- [progressbar](https://github.com/WoLpH/python-progressbar) 控制台进度条，功能完备
+- [tqdm](https://github.com/tqdm/tqdm) 控制台进度条工具，支持命令行直接使用
 
 
 ## 算法和设计模式
