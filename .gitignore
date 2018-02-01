@@ -15,6 +15,6 @@ sdist/
 .installed.cfg
 *.egg
 
+Pipfile.lock
 .DS_Store
-
 .ftpconfig
