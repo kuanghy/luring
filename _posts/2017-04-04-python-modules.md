@@ -24,6 +24,7 @@ tags: python
 - [flashtext](https://github.com/vi3k6i5/flashtext) 快速进行大规模语料库的文本搜索与替换
 - [Eel](https://github.com/ChrisKnott/Eel) 一个小型库，用于制作简单的类似 [Electron](https://electronjs.org/) 的离线 HTML/JS GUI 应用程序
 - [bidict](https://github.com/jab/bidict) 双向查询字典，可以通过 value 查询 key
+- [](https://github.com/kennethreitz/tablib) 把数据导出为 Excel、JSON、CSV 等格式
 
 
 ## 日志处理
@@ -91,6 +92,7 @@ tags: python
 - [Dispy](https://github.com/pgiri/dispy) 相比起 Celery 和 SCOOP，Dispy 提供更为轻量级的分布式并行服务
 - [PP](http://www.parallelpython.com/) （Parallel Python）是另外一个轻量级的 Python 并行服务
 - [Asyncoro](http://asyncoro.sourceforge.net/) 一个利用 Generator 实现分布式并发的 Python 框架
+- [schedule](https://github.com/dbader/schedule) 一个简单的作业调度工具
 - [APScheduler](http://apscheduler.readthedocs.io/en/latest/) 任务调度模块，一个 Python 定时任务框架
 - [mpi4py](http://pythonhosted.org/mpi4py/) 一个构建在MPI之上的Python库，主要使用Cython编写
 - [pyee](https://pyee.readthedocs.io) 一个 [node.js’s EventEmitter](https://nodejs.org/api/events.html) 的 Python 粗略实现
