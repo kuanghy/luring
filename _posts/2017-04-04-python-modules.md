@@ -122,6 +122,7 @@ tags: python
 - [PyQuery](https://pythonhosted.org/pyquery/) 像 JQuery 一样使用
 - [html5lib](http://html5lib.readthedocs.io/en/latest/)
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/) 一个可以从 HTML 或 XML 文件中提取数据的 Python 库
+- [requests-html](https://github.com/kennethreitz/requests-html) HTML 解析库，是对 Requests, PyQuery, lxml 等库的封装
 
 
 ## Web 框架
