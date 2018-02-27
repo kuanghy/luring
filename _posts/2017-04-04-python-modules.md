@@ -113,7 +113,8 @@ tags: python
 - [builtwith](https://pypi.python.org/pypi/builtwith/) 识别网站所使用技术
 - [whois](https://pypi.python.org/pypi/python-whois) 域名公共查询工具：[Whois](http://whois.chinaz.com)
 - [robotparser](https://docs.python.org/3.5/library/urllib.robotparser.html) 标准库，解析 robots.txt 文件
-- [equestium](https://github.com/tryolabs/requestium) 是 Requests, Selenium 和 Parsel 的结合体，结合了 Chrome 59 以后的 headless 无头特性（代替了 phantomjs）
+- [requestium](https://github.com/tryolabs/requestium) 是 Requests, Selenium 和 Parsel 的结合体，结合了 Chrome 59 以后的 headless 无头特性（代替了 phantomjs）
+- [fake-useragent](https://github.com/hellysmile/fake-useragent) 伪造 HTTP 请求头中 User Agent 的值
 
 
 ## HTML/XML
