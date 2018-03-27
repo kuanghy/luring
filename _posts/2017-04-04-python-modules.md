@@ -75,6 +75,7 @@ tags: python
 - [better-exceptions](https://github.com/Qix-/better-exceptions) 以更友好的形式展示异常信息
 - [progressbar](https://github.com/WoLpH/python-progressbar) 控制台进度条，功能完备
 - [tqdm](https://github.com/tqdm/tqdm) 控制台进度条工具，支持命令行直接使用
+- [icecream](https://github.com/gruns/icecream) 一款专用于 print 调试的工具
 
 
 ## 算法和设计模式
