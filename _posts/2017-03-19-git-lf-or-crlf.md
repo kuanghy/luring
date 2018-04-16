@@ -105,5 +105,6 @@ $ git config --global core.safecrlf true
 到此，问题解决。go home！
 
 **参考资料:**
+
 - [http://toub.es/2012/05/28/fatal-crlf-would-be-replaced-lf](http://toub.es/2012/05/28/fatal-crlf-would-be-replaced-lf)
 - [https://github.com/cssmagic/blog/issues/22](https://github.com/cssmagic/blog/issues/22)
