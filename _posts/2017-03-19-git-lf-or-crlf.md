@@ -42,10 +42,10 @@ fatal: CRLF would be replaced by LF ...
 
 ```
 # 提交时转换为LF，检出时转换为CRLF
-git config --global core.autocrlf true   
+git config --global core.autocrlf true
 
 # 提交时转换为LF，检出时不转换
-git config --global core.autocrlf input   
+git config --global core.autocrlf input
 
 # 提交检出均不转换
 git config --global core.autocrlf false
@@ -61,10 +61,10 @@ git config --global core.autocrlf false
 
 ```
 # 拒绝提交包含混合换行符的文件
-git config --global core.safecrlf true   
+git config --global core.safecrlf true
 
 # 允许提交包含混合换行符的文件
-git config --global core.safecrlf false   
+git config --global core.safecrlf false
 
 # 提交包含混合换行符的文件时给出警告
 git config --global core.safecrlf warn
@@ -104,4 +104,6 @@ $ git config --global core.safecrlf true
 
 到此，问题解决。go home！
 
-参考资料: [http://toub.es/2012/05/28/fatal-crlf-would-be-replaced-lf](http://toub.es/2012/05/28/fatal-crlf-would-be-replaced-lf)
+**参考资料:**
+- [http://toub.es/2012/05/28/fatal-crlf-would-be-replaced-lf](http://toub.es/2012/05/28/fatal-crlf-would-be-replaced-lf)
+- [https://github.com/cssmagic/blog/issues/22](https://github.com/cssmagic/blog/issues/22)
