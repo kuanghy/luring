@@ -23,6 +23,7 @@ tags: python
 - [pipenv](https://github.com/pypa/pipenv) Python Development Workflow for Humans,相当于是环境管理和包管理二合一，由 Kenneth Reitz （Requests 的作者 ）编写，现在移交给 Python 官方来维护，提供比 pip 体验更好的开发包管理
 - [flashtext](https://github.com/vi3k6i5/flashtext) 快速进行大规模语料库的文本搜索与替换
 - [Eel](https://github.com/ChrisKnott/Eel) 一个小型库，用于制作简单的类似 [Electron](https://electronjs.org/) 的离线 HTML/JS GUI 应用程序
+- [Pywebview](https://github.com/r0x0r/pywebview) 类似于 Electron 的库, 使用 Web 技术和 Python 相结合来创建GUI应用程序
 - [bidict](https://github.com/jab/bidict) 双向查询字典，可以通过 value 查询 key
 - [tablib](https://github.com/kennethreitz/tablib) 把数据导出为 Excel、JSON、CSV 等格式
 
@@ -106,6 +107,7 @@ tags: python
 - [Click](http://click.pocoo.org) 用于快速创建命令行工具
 - [clize](http://clize.readthedocs.io/en/stable/) 利用装饰器将函数转换成命令行解析器
 - [python-fire](https://github.com/google/python-fire) Google 开源的一个可从任何 Python 代码自动生成命令行接口（CLI）的库,是开发和调试非常有用的工具，只需将想要在命令行显示的功能写为函数/模块/类，就可以在命令行模式下调用
+- [Plumbum](https://github.com/tomerfiliba/plumbum) 命令行工具包
 
 
 ## HTTP
