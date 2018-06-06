@@ -18,7 +18,7 @@ tags: python 迭代器
 
 这里提到两个概念：`可迭代对象`、`迭代器`。本文的主要目的就是研究这两者的区别与联系，同时还讨论与之相关的一些内容。
 
-![relationships](http://ww4.sinaimg.cn/mw690/c3c88275gw1f3zbjmfejfj20zc0fytay.jpg)
+![relationships](http://wx2.sinaimg.cn/mw690/c3c88275gw1f3zbjmfejfj20zc0fytay.jpg)
 
 ## 可迭代对象（Iterable）
 
