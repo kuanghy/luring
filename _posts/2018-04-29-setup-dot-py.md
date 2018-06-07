@@ -357,7 +357,7 @@ README、README.txt、setup.py 和 setup.cfg文件
 
 ## 版本命名
 
-包版本的命名格式因为如下形式:
+包版本的命名格式应为如下形式:
 
 ```
 N.N[.N]+[{a|b|c|rc}N[.N]+][.postN][.devN]
