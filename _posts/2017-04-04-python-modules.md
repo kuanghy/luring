@@ -7,7 +7,7 @@ category: Python
 tags: python
 ---
 
-## 基础库和工具
+## 基础库与工具
 
 - [six](https://pypi.python.org/pypi/six) Python 2 和 3 的兼容库，用于编写 Python2 和 3 兼容的代码
 - [attrs](https://pypi.python.org/pypi/attrs) Attributes Without Boilerplate
@@ -26,6 +26,7 @@ tags: python
 - [Pywebview](https://github.com/r0x0r/pywebview) 类似于 Electron 的库, 使用 Web 技术和 Python 相结合来创建GUI应用程序
 - [bidict](https://github.com/jab/bidict) 双向查询字典，可以通过 value 查询 key
 - [tablib](https://github.com/kennethreitz/tablib) 把数据导出为 Excel、JSON、CSV 等格式
+- [glom](https://github.com/mahmoud/glom) 处理嵌套数据结构
 
 
 ## 日志处理
@@ -59,9 +60,11 @@ tags: python
 - [adb](https://github.com/ovidiucp/pymysql-benchmarks) 异步 mysql 库
 - [SQLAlchemy](http://www.sqlalchemy.org/) 提供了 SQL 工具包及对象关系映射(ORM)工具
 - [Peewee](http://peewee.readthedocs.io/en/latest/) 超级轻量的一个 ORM 框架
+- [Pony](https://ponyorm.com) ORM 框架，使用生成器实现查询功能
 - [pymongo](http://api.mongodb.com/python/current/index.html) MongoDB 官方支持的驱动程序
 - [motor](http://motor.readthedocs.io/) 为 Tornado 提供了一个基于回调和 Future 机制的非堵塞的 MongoDB 驱动程序
 - [redis-py](https://redis-py.readthedocs.io/en/latest/) Redis 的 Python 接口程序
+- [dataset](https://github.com/pudo/dataset) 一个 SQLAlchemy 的包装器，使得不用直接写 SQL 而操作数据库
 
 
 ## 打印输出
@@ -79,7 +82,7 @@ tags: python
 - [icecream](https://github.com/gruns/icecream) 一款专用于 print 调试的工具
 
 
-## 算法和设计模式
+## 算法与设计模式
 
 - [https://github.com/nryoung/algorithms](https://github.com/nryoung/algorithms) 算法和数据结构库
 - [https://github.com/tylerlaberge/PyPattyrn.git](https://github.com/tylerlaberge/PyPattyrn.git) 一个实现了常见设计模式的简单且有效的 Python 库
@@ -178,7 +181,7 @@ tags: python
 - [YAMI](http://www.inspirel.com/yami4/)
 
 
-## 日期和时间处理
+## 日期与时间处理
 
 - [Delorean](http://delorean.readthedocs.io/en/latest/quickstart.html) 用它处理日期和时间非常方便。设置时区，截取到秒、分、小时，甚至使用特定步骤从一个日期进到另一个日期
 - [Arrow](http://crsmithdev.com/arrow/) 提供了合理的、友好的方式来创建、控制、格式化、转换 Python 的日期、时间和时间戳
