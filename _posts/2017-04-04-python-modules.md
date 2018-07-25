@@ -27,6 +27,8 @@ tags: python
 - [bidict](https://github.com/jab/bidict) 双向查询字典，可以通过 value 查询 key
 - [tablib](https://github.com/kennethreitz/tablib) 把数据导出为 Excel、JSON、CSV 等格式
 - [glom](https://github.com/mahmoud/glom) 处理嵌套数据结构
+- [envparse](https://github.com/rconradharris/envparse) 简单的环境变量解析库
+- [environs](https://github.com/sloria/environs) 解析环境变量的库。受 envparse 启发，底层使用 marshmallow 验证并序列化值
 
 
 ## 日志处理
