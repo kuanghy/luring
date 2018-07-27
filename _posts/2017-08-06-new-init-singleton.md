@@ -67,6 +67,8 @@ Foo(m=1, n=2)
 - 1、 `__new__` 属于类级别的方法，即使没有被 classmethod 装饰，其决定生成实例的过程。
 - 2、 `__init__` 属于实例级别的方法，决定实例初始化的过程，比如添加属性，对初始化参数进行判断，转换等。
 
+需要注意的是，在重写 `__new__` 方法与 `__init__` 方法的参数应该保持一致，否则会有 **TypeError** 发生。如果直接调用 `object.__new__()` 则在 Python 3.3 及以后的版本中不再支持传入参数，这一点参考自：[https://stackoverflow.com/questions/34777773/typeerror...](https://stackoverflow.com/questions/34777773/typeerror-object-takes-no-parameters-after-defining-new)
+
 `__init__` 方法，在定义一个 class 的时候一般都会涉及到，也是比较常用。而 `__new__` 方法则很少会用到，那么它到底有什么用途呢？
 
 ## new 方法作用
