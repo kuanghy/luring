@@ -114,7 +114,7 @@ class Descriptor(object):
         pass
 ```
 
-描述符将某种特殊类型的类的`实例`指派给另一个类的`属性`(**注意：** 这里是类属性，而不是对象属性，即描述符被分配给一个类，而不是实例)。描述符相当于是一种创建托管属性的方法。托管属性可以用于保护属性不受修改，对传递的值做检查，或自动更新某个依赖属性的值。下面是一个简单的示例：
+描述符将某种特殊类型的类的`实例`指派给另一个类的`属性`(**注意：** 这里是类属性，而不是对象属性，即描述符被分配给一个类，而不是实例)。**描述符相当于是一种创建托管属性的方法**。托管属性可以用于保护属性不受修改，对传递的值做检查，或自动更新某个依赖属性的值。下面是一个简单的示例：
 
 ```python
 class Descriptor(object):
@@ -188,70 +188,58 @@ class ClassMethod(object):
         return _func
 ```
 
-## 对象访问顺序
-
-在 Python 中，解释器将按照如下的优先级顺序在对象中搜索属性:
-
-- 1. 类属性
-- 2. 数据描述符（也被称为资料描述符，data descriptor）
-- 3. 实例属性
-- 4. 非数据描述符
-
-object.__getattribute__(self, name)
-类 中的 数据描述符
-object.__dict__.get(name) 自身属性字典
-object.__class__.__dict__.get(name) 类属性字典 / 非数据描述符
-object.__getattr__(name)
-
-
-下面来了解下与对象属性访问有关的几个方法：
-
-- `__get__`
-
-该方法用来实现 Python 的描述器，与 `__set__`、`__delete__` 一样属于描述符协议的一员。同时实现了 `__get__` 和 `__set__` 的称之为资料描述器（data descriptor），仅仅实现 `__get__` 的则为非描述器，这两个概念涉及到属性的搜索优先级顺序问题。
-
-- `__getattr__`
-
-在访问对象的属性时，首先需要从 `object.__dict__` 属性中搜索该属性，再从 `__getattr__` 方法中查找。该方法与 `__setattr__`、`__delattr__` 方法一样，在访问的属性不存在时被调用。这是 Python 动态语言特性的体现。可以对这三个方法进行重载来实现一些特殊的需求。例如：
+此外，Python 的 property 则是一个数据描述符，它将对象属性的访问转化为方法调用。类中的 property 装饰器有一个缺陷，每次试图访问 property 属性时其装饰的函数都会被调用，而有时候可能只希望函数被调用一次。于是，可以模仿 property 来实现一个惰性属性(lazy property)，即在必要的时候（属性被真正访问到时）才初始化属性。以下是惰性属性描述符的实现示例：
 
 ```python
-class Foo(object):
-    def __init__(self):
-        pass
+class lazy_property(object):
 
-    def __getattr__(self, key):
-        try:
-            return self.__dict__[key]
-        except KeyError:
-            return None
+    def __init__(self, func):
+        self.func = func
 
-    def __setattr__(self, key, value):
-        self.__dict__[key] = value
-
-    def __delattr__(self, key):
-        try:
-            del self.__dict__[key]
-        except KeyError:
-            return None
-
-
-# Script starts from here
-
-if __name__ == "__main__":
-    f = Foo()
-    print f.bar
-    f.bar = 10
-    print f.bar
-    del f.bar
-
-# 执行结果：
-#   None
-#   10
+    def __get__(self, obj, cls):
+        if obj is None:
+            return self
+        value = obj.__dict__[self.func.__name__] = self.func(obj)
+        return value
 ```
 
-- `__getattribute__`
+上例中实现一个非数据描述来达到惰性初始化属性的目的。对象惰性属性在被访问时会调用 func 初始化得到 value，然后再在对象的 `__dict__` 中设置同名的属性，下一次再访问属性时，会直接返回 `__dict__` 中保存的值，而不再去访问描述符。这里涉及到了对象属性的访问优先级顺序问题。
 
-该方法会在每次查找属性和方法时无条件的被调用。在优先级链中，类字典中发现的数据描述符的优先级高于实例变量，实例变量优先级高于非数据描述符，如果提供了 `__getattr__()`，优先级链会为 `__getattr__()` 分配最低优先级。重写该方法时，不能使用 `self.xxx` 的形式访问自己的属性，这样会导致无限递归，而需要访问自己的属性时，应该调用基类的方法。
+## 属性访问顺序
+
+Python 在对象属性访问时会无条件调用 `__getttribute__()` 方法。在属性搜索的优先级链中，**类字典中发现的数据描述符的优先级高于实例变量，实例变量优先级高于非数据描述符**。如果提供了 `__getattr__()`，优先级链会为 `__getattr__()` 分配最低优先级。除非 `__getttribute__()` 显示调用或者抛出 AttributeError 异常，否则 `__getattr__()` 将不会被调用。
+
+描述符的调用是通过 `_getattribute__()` 方法实现的，**重写该方法可以阻止描述符的自动调用**。数据描述符总是覆盖类实例的 `__dict__`，而非数据描述符可能会被类实例的 `__dict__` 覆盖。`_getattribute__()` 方法的实现大概类似如下形式：
+
+```python
+def __getattribute__(self, key):
+    "Emulate type_getattro() in Objects/typeobject.c"
+    v = object.__getattribute__(self, key)
+    if hasattr(v, '__get__'):
+        return v.__get__(None, self)
+    return v
+```
+
+需要注意的是，重写 `__getttribute__()` 方法时，不能在其实现中使用 `self.xxx` 的形式访问自己的属性，这样会导致无限递归。而需要访问自己的属性时，应该调用基类的方法。如 `object.__getattribute__(self, name)`。
+
+下面详细描述下对象属性的访问顺序。假设有 class C, c = C(), 那么 c.x 的执行顺序为：
+
+- （1）如果 x 是出现在 C 或其基类的 `__dict__` 中，且是数据描述符， 那么调用其 `__get__` 方法，否则
+- （2）如果 x 出现在 c 的 `__dict__` 中，那么直接返回 `c.__dict__['x']`，否则
+- （3）如果 x 出现在 C 或其基类的 `__dict__` 中，那么
+    - （3.1）如果 x 是非数据描述符，那么调用其 `__get__` 方法，否则
+    - （3.2）返回 `__dict__['x']`
+- （4）如果 C 有 `__getattr__` 方法，调用 `__getattr__` 方法，否则
+- （5）抛出 AttributeError
+
+## 处理缺失值
+
+默认情况下，当访问的属性在对象中不存在时，会抛出 AttributeError 异常。而在有些场景中我们并不希望这样，比如在我工作的项目中，当访问一项配置时，如果该配置项不存在，我们希望其返回 None，而不是发生异常。这用 `__getattr__` 方法很容易实现，该方法通常与 `__setattr__`、`__delattr__`
+
+```
+
+```
+
 
 还有一个与字典相关的方法，这个方法虽然与属性访问无关，这里也做一下简单的介绍。
 
@@ -279,6 +267,7 @@ if __name__ == "__main__":
 
 ```python
 class defaultdict(dict):
+
     def __init__(self, default_factory=None, *a, **kw):
       dict.__init__(self, *a, **kw)
       self.default_factory = default_factory
@@ -291,3 +280,5 @@ class defaultdict(dict):
 ## 参考资料
 
 - [https://docs.python.org/3/howto/descriptor.html](https://docs.python.org/3/howto/descriptor.html)
+- [http://python.jobbole.com/83562/](http://python.jobbole.com/83562/)
+- [http://python.jobbole.com/88937/](http://python.jobbole.com/88937/)
