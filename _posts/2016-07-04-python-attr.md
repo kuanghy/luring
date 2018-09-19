@@ -234,33 +234,46 @@ def __getattribute__(self, key):
 
 ## 处理缺失值
 
-默认情况下，当访问的属性在对象中不存在时，会抛出 AttributeError 异常。而在有些场景中我们并不希望这样，比如在我工作的项目中，当访问一项配置时，如果该配置项不存在，我们希望其返回 None，而不是发生异常。这用 `__getattr__` 方法很容易实现，该方法通常与 `__setattr__`、`__delattr__`
+默认情况下，当访问的属性在对象中不存在时，会抛出 AttributeError 异常。而在有些场景中我们并不希望这样，比如在我工作的项目中，当访问一项配置时，如果该配置项不存在，我们希望其返回 None，而不是发生异常。这用 `__getattr__` 方法很容易实现，该方法通常与 `__setattr__`、`__delattr__` 方法配合使用，`__setattr__` 方法会改变属性的复制行为：
 
 ```
+class Foo(object):
 
+    def __init__(self):
+        self.x = 1
+
+    def __getattr__(self, key):
+        try:
+            return self.__dict__[key]
+        except KeyError:
+            return None
+
+    def __setattr__(self, key, value):
+        self.__dict__[key] = value
+
+    def __delattr__(self, key):
+        try:
+            del self.__dict__[key]
+        except KeyError:
+            return None
 ```
 
-
-还有一个与字典相关的方法，这个方法虽然与属性访问无关，这里也做一下简单的介绍。
-
-- `__missing__`
-
-这个方法属于字典，当访问的键不存在时，`dict.__getitem__()` 方法会自动调用该方法。需要注意的是 dict 中并没这个方法，需要在子类中实现。示例：
+如果对象时一个字典，则当访问一个不存在的 key 时，会发生 KeyError 异常。字典也有一个方法可以用来处理缺失值，即 `__missing__`。这个方法虽然与属性访问无关，这里也做一下简单的介绍。当访问的键不存在时，`dict.__getitem__()` 方法会自动调用该方法。需要注意的是 dict 中并没这个方法，需要在子类中实现。示例：
 
 ```python
 class FooDict(dict):
-    def __missing__(self, key):
-        self[key] = "Yes"
-        return "Yes"
 
-if __name__ == "__main__":
-    fdict = FooDict()
-    print fdict
-    print fdict["bar"]
+    def __missing__(self, key):
+        self[key] = "hello"
+        return "hello"
+
+fdict = FooDict()
+print fdict
+print fdict["bar"]
 
 # 执行结果：
-#   {}
-#   Yes
+# {}
+# hello
 ```
 
 可以用该方法来实现一个缺省字典：
