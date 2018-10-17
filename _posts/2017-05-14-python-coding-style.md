@@ -327,6 +327,8 @@ if not len(seq)
 
 - 13、避免在循环中用 + 或 += 来连续拼接字符串。因为字符串是不变型，这会毫无必要地建立很多临时对象，从而成为二次方级别的运算量而不是线性运算时间。
 
+- 14、多去了解标准库，标准库中用很多好用的功能，能够更优雅的解决问题，如 pkgutil.get_data()、operator.methodcaller() 等等。
+
 ## 参考资料
 
 - [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/)
