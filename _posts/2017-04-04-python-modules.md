@@ -29,6 +29,7 @@ tags: python
 - [glom](https://github.com/mahmoud/glom) 处理嵌套数据结构
 - [envparse](https://github.com/rconradharris/envparse) 简单的环境变量解析库
 - [environs](https://github.com/sloria/environs) 解析环境变量的库。受 envparse 启发，底层使用 marshmallow 验证并序列化值
+- [swig](http://www.swig.org/Doc1.3/Python.html) Python 调用 C/C++ 代码的工具，支持 C++ 的类继承
 
 
 ## 日志处理
