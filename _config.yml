@@ -64,8 +64,10 @@ links: # 友情链接
     url: http://jeffjade.com/
   - title: 卢松松博客
     url: http://lusongsong.com/
-  - title: 搜外SEO问答
+  - title: 搜外SEO 问答
     url: http://ask.seowhy.com
+  - title: 喪我者说
+    url: https://www.imlosingme.com
 
 # Code hub settings
 codehub: # 代码仓库
