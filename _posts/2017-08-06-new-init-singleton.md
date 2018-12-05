@@ -24,7 +24,7 @@ class A(object):
         return super(A, cls).__new__(cls, *args, **kwargs)
 ```
 
-如果 `__new__` 方法不返回 cls 的一个实例，那么新的实例的 `__init__` 方法不会被调用。
+如果 `__new__` 方法不返回 cls 的一个实例，那么新的实例的 `__init__` 方法不会被调用。需要注意的是，**在 Python 3.3 之后，new 方法不再接收额外的参数**，否则会有异常 [TypeError: object() takes no parameters](https://stackoverflow.com/questions/34777773/typeerror-object-takes-no-parameters-after-defining-new)。
 
 `__init__` 方法在实例被创建之后被调用，该方法仅仅是对 `__new__` 方法创建的实例进行一些初始化操作。注意，**如果 `__new__` 方法返回实例，则 `__init__` 方法总是会被调用（这一点在用 new 方法实现单例时要特别注意）**
 

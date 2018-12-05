@@ -159,11 +159,11 @@ tags: python
 
 ## 网络爬虫
 
-- [scrapy](https://scrapy.org/)
-- [mechanize](http://wwwsearch.sourceforge.net/mechanize/)
-- [selenium](http://selenium-python.readthedocs.io/) 一个调用浏览器的driver，通过这个库你可以直接调用浏览器完成某些操作
-- [cola](https://github.com/chineking/cola) 一个分布式爬虫框架。
-- [pyspider](http://docs.pyspider.org/en/latest/)
+- [scrapy](https://scrapy.org/) 一个快速、高层次的屏幕抓取和web抓取框架，用于抓取web站点并从页面中提取结构化的数据
+- [mechanize](http://wwwsearch.sourceforge.net/mechanize/) 是对 urllib2 的部分功能的替换，能够更好的模拟浏览器行为
+- [selenium](http://selenium-python.readthedocs.io/) 一个调用浏览器的 Driver，通过这个库你可以直接调用浏览器完成某些操作。关于其使用，有一个不错的教程：[Free Selenium Tutorials](https://www.guru99.com/selenium-tutorial.html)
+- [cola](https://github.com/chineking/cola) 一个分布式爬虫框架
+- [pyspider](http://docs.pyspider.org/en/latest/) 国人编写的强大的网络爬虫系统并带有强大的WebUI。分布式架构，支持多种数据库后端，支持脚本编辑器，任务监视器，项目管理器以及结果查看器
 
 
 ## 消息队列
