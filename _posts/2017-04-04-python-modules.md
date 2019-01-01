@@ -152,6 +152,7 @@ tags: python
 - [web2py](http://www.web2py.com/) 一种免费的、开源的 web 开发框架，用于敏捷地开发安全的、数据库驱动的 web 应用
 - [Sanic](https://github.com/channelcat/sanic) 一个与 Flask 类似，基于 uvloop 的 web 框架，它能让 Python 更快速
 - [hug](https://github.com/timothycrosley/hug) 旨在简化 Python RESET APIs 的开发，其本身并非一个网络框架，构建在 Falcon 的高性能 HTTP 库之上，意味着可以使用任何 wsgi 兼容的服务器(例如 gunicorn)将其部署到生产环境中
+- [Connexion](https://github.com/zalando/connexion) 一个基于Flask实现的一个框架，它基于以YAML格式描述的API的OpenAPI 2.0规范（以前称为Swagger Spec）自动处理HTTP请求
 
 
 ## Web Server
