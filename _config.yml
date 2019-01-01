@@ -71,7 +71,7 @@ links: # 友情链接
 codehub: # 代码仓库
   - title: Github
     url: https://github.com/kuanghy
-  - title: Git@OSC
-    url: https://git.oschina.net/kuanghy
+  - title: Gitee
+    url: https://gitee.com/kuanghy
   - title: Coding
     url: https://coding.net/u/konghy
