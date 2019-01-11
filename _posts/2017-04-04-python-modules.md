@@ -240,6 +240,7 @@ tags: python
 - [jieba](https://github.com/fxsjy/jieba)  中文分词组件
 - [thulac](http://thulac.thunlp.org/) 一个高效的中文词法分析工具包
 - [SnowNLP](https://github.com/isnowfy/snownlp) 处理中文文本的库
+- [pkuseg-python](https://github.com/lancopku/pkuseg-python) 北大开源的领域细分的中文分词工具，简单易用
 
 
 ## 代码与性能测试
