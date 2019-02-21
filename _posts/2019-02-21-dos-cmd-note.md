@@ -12,6 +12,7 @@ tags: windows
 ## 常用命令概览
 
 **文件夹管理**
+
 - cd 显示当前目录名或改变当前目录
 - md/mkdir 创建目录
 - rd/rmdir 删除一个目录
@@ -21,6 +22,7 @@ tags: windows
 - xcopy 复制文件和目录树
 
 **文件管理**
+
 - type 显示文本文件的内容
 - copy 将一份或多份文件复制到另一个位置
 - del 删除一个或数个文件
@@ -33,6 +35,7 @@ tags: windows
 - fc 比较两个文件或两个文件集并显示它们之间的不同
 
 **网络命令**
+
 - ping 进行网络连接测试、名称解析
 - ftp 文件传输
 - net 网络命令集及用户管理
@@ -43,6 +46,7 @@ tags: windows
 - netstat 进程网络使用情况统计
 
 **系统管理**
+
 - at 安排在特定日期和时间运行命令和程序
 - shutdown 立即或定时关机或重启
 - tskill 结束进程
@@ -53,6 +57,7 @@ tags: windows
 - powercfg 控制系统上的电源设置
 
 **其他**
+
 - cls 清除屏幕
 - echo 显示信息，或将命令回显打开或关上
 - more 逐屏显示输出
@@ -66,23 +71,24 @@ tags: windows
 
 ## 使用示例
 
-#### 目录跳转
+### 目录跳转
 
 我们通常需要在不同的目录间切换以完成工作，切换目录使用 `cd` 命令，即 change directory 的缩写，cd 不加参数时显示当前目录位置，如果要切换驱动器则需加上 /d 命令，或者使用驱动器号加冒号，如 `D:` 先切换到相应驱动器再做目录跳转。
 
 ```
-C:\Users\Huoty>cd                                                                                                       C:\Users\Huoty                                                                                                                                                                                                                      
+C:\Users\Huoty>cd
+C:\Users\Huoty
 
-C:\Users\Huoty>cd "C:\Program Files"                                                                                                                                                                                                            
+C:\Users\Huoty>cd "C:\Program Files"
 
-C:\Program Files>cd /d D:/                                                                                                                                                                                                                      
+C:\Program Files>cd /d D:/
 
-D:\>C:                                                                                                                                                                                                                                          
+D:\>C:
 
 C:\Program Files>
 ```
 
-#### 字符串查找
+### 字符串查找
 
 `find` 和 `findstr` 命令用于从文件或者管道中搜索字符串:
 
@@ -131,7 +137,7 @@ FINDSTR [/B] [/E] [/L] [/R] [/S] [/I] [/X] [/V] [/N] [/M] [/O] [/P] [/F:file]
   xyz\>    字位置: 字的结束
 ```
 
-#### 查看端口占用
+### 查看端口占用
 
 Windows 环境下可以用 `netstat` 命令查看进程的网络统计情况，使用 `netstat –ano` 可以显示系统中打开的端口和对应的进程号。
 
@@ -147,8 +153,7 @@ Windows 环境下可以用 `netstat` 命令查看进程的网络统计情况，�
 
 > tasklist | findstr "<PID号>"
 
-
-#### 设置环境变量
+### 设置环境变量
 
 设置环境变量用 `set` 命令，该命令在没有任何参数时显示当前所有环境变量，如果仅指定变量名则显示该环境变量的值。
 
