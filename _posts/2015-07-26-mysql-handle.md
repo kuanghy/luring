@@ -101,6 +101,10 @@ MySQL 是一个非常流行的小型关系型数据库管理系统。在数据�
 
 > alter table 表名 drop column 字段名称;
 
+查看用户正在运行的线程：
+
+> show [full] processlist;
+
 其他对数据库的相应操作使用 SQL 语句即可。
 
 **一个实用的 shell 脚本：**
