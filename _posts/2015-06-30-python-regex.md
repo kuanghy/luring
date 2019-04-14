@@ -181,7 +181,19 @@ Pattern 对象的实例方法与 re 模块提供的函数用法基本相同，�
 pattern.match(string[, pos[, endpos]]) | re.match(pattern, string[, flags])
 ```
 
-该方法将从 string 的 pos 下标处起尝试匹配 pattern；如果 pattern 结束时仍可匹配，则返回一个 **Match 对象**；如果匹配过程中 pattern 无法匹配，或者匹配未结束就已到达 endpos，则返回 None。pos 和 endpos 的默认值分别为 0和 len(string)；re.match()无法指定这两个参数，参数flags用于编译pattern时指定匹配模式。
+该方法将从 string 的 pos 下标处起尝试匹配 pattern；如果 pattern 结束时仍可匹配，则返回一个 **Match 对象**；如果匹配过程中 pattern 无法匹配，或者匹配未结束就已到达 endpos，则返回 None。pos 和 endpos 的默认值分别为 0 和 len(string)；re.match() 无法指定这两个参数，参数 flags 用于编译 pattern 时指定匹配模式。使用 re.match 是若要完全匹配，pattern 要以 $ 结尾。
+
+```python
+>>> s = "hello world!"
+>>> p = re.compile("world")
+>>> p.match(s)
+>>> p.match(s, 6)
+<re.Match object; span=(6, 11), match='world'>
+>>> re.match(p, s)
+>>> re.match("hello world", s)
+<re.Match object; span=(0, 11), match='hello world'>
+>>> re.match("hello world$", s)
+```
 
 ### 4. Match 对象
 
@@ -189,12 +201,12 @@ Match 对象是一次匹配的结果，包含此次匹配相关的信息，可�
 
 **属性：**
 
-- (1)**string**: 匹配时使用的文本
-- (2)**re**: 匹配时使用的 Patter 对象
-- (3)**pos**: 文本中正则表达式开始搜索的索引，值与 Pattern.match() 和 Pattern.search() 方法的同名参数相同
-- (4)**endpos**: 文本中正则表达式结束搜索的索引，值与 Pattern.match() 和 Pattern.search() 方法的同名参数相同
-- (5)**lastindex**: 最后一个被捕获的分组在文本中的索引，如果没有被捕获的分组，将为 None
-- (6)**lastgroup**: 最后一个被捕获的分组的别名，如果这个分组没有别名或者没有被捕获的分组，将为 None
+- (1) **string**: 匹配时使用的文本
+- (2) **re**: 匹配时使用的 Patter 对象
+- (3) **pos**: 文本中正则表达式开始搜索的索引，值与 Pattern.match() 和 Pattern.search() 方法的同名参数相同
+- (4) **endpos**: 文本中正则表达式结束搜索的索引，值与 Pattern.match() 和 Pattern.search() 方法的同名参数相同
+- (5) **lastindex**: 最后一个被捕获的分组在文本中的索引，如果没有被捕获的分组，将为 None
+- (6) **lastgroup**: 最后一个被捕获的分组的别名，如果这个分组没有别名或者没有被捕获的分组，将为 None
 
 **方法：**
 
@@ -213,12 +225,36 @@ Match 对象是一次匹配的结果，包含此次匹配相关的信息，可�
 - (7)**expand(template):**
 将匹配到的分组代入template中然后返回。template中可以使用 \id 或 \g、\g 引用分组，但不能使用编号 0。\id 与 \g 是等价的；但 \10 将被认为是第 10 个分组，如果你想表达 \1 之后是字符 '0'，只能使用 \g0
 
+```python
+>>> m = re.match(r'(\w{3})-(\d{3})', "abc-123")
+>>> m.group()  # 完全匹配
+'abc-123'
+>>> m.group(1)  # 子组 1
+'abc'
+>>> m.group(2)  # 子组 2
+'123'
+>>> m.groups()  # 全部子组
+('abc', '123')
+```
+
 ### 5. re.search
 
 ```
 pattern.search(string[, pos[, endpos]]) | re.search(pattern, string[, flags])
 ```
 这个方法用于查找字符串中可以匹配成功的子串。从 string 的 pos 下标处起尝试匹配 pattern，如果 pattern 结束时仍可匹配，则返回一个 Match 对象；若无法匹配，则将 pos 加 1 后重新尝试匹配；直到 pos=endpos 时仍无法匹配则返回 None。pos 和 endpos 的默认值分别为 0 和 len(string))；re.search() 无法指定这两个参数，参数 flags 用于编译 pattern 时指定匹配模式。
+
+与 match 方法不同是，match 从字符串开始位置开始匹配（除非指定了 pos 参数），而 search 则是从字符串中查找能够匹配的子串，不一定从起始位置开始，且如果字符串中存在多个 pattern 子串时只返回第一个。
+
+```python
+>>> s = "blablabla..."
+>>> p = re.compile("ab")
+>>> p.search("ab")
+<re.Match object; span=(0, 2), match='ab'>
+>>> p.search("ab", pos=8)
+>>> re.search("bla", s)
+<re.Match object; span=(0, 3), match='bla'>
+```
 
 ### 6. re.split
 
@@ -228,6 +264,14 @@ pattern.split(string[, maxsplit]) | re.split(pattern, string[, maxsplit])
 
 按照能够匹配的子串将 string 分割后返回列表。maxsplit 用于指定最大分割次数，不指定将全部分割。
 
+```python
+>>> s = "blablabla..."
+>>> re.split("a", s)
+['bl', 'bl', 'bl', '...']
+>>> re.split("a", s, 2)
+['bl', 'bl', 'bla...']
+```
+
 ### 7. re.findall
 
 ```
@@ -236,13 +280,34 @@ pattern.findall(string[, pos[, endpos]]) | re.findall(pattern, string[, flags])
 
 搜索 string，以列表形式返回全部能匹配的子串。
 
+```python
+>>> s = "blablabla..."
+>>> p = re.compile('la')
+>>> p.findall(s)
+['la', 'la', 'la']
+>>> p.findall(s, 3)
+['la', 'la']
+>>> re.findall(p, s)
+['la', 'la', 'la']
+```
+
 ### 8. re.finditer
 
 ```
 pattern.finditer(string[, pos[, endpos]]) | re.finditer(pattern, string[, flags])
 ```
 
-搜索string，返回一个顺序访问每一个匹配结果（Match对象）的迭代器。
+搜索 string，返回一个顺序访问每一个匹配结果（Match对象）的迭代器。与 findall 方法不同的是，finditer 返回的是 Match 对象，获取匹配结果需要再调用 Match 对象的相应方法。
+
+```
+>>> s = "blablabla..."
+>>> re.finditer('la', s)
+<callable_iterator object at 0x10cfab6d8>
+>>> list(re.finditer('la', s))
+[<re.Match object; span=(1, 3), match='la'>, <re.Match object; span=(4, 6), match='la'>, <re.Match object; span=(7, 9), match='la'>]
+>>> [m.group() for m in re.finditer('la', s)]
+['la', 'la', 'la']
+```
 
 ### 9. re.sub
 
@@ -250,7 +315,21 @@ pattern.finditer(string[, pos[, endpos]]) | re.finditer(pattern, string[, flags]
 pattern.sub(repl, string[, count]) | re.sub(pattern, repl, string[, count])
 ```
 
-使用 repl 替换 string 中每一个匹配的子串后返回替换后的字符串。当 repl 是一个字符串时，可以使用 \id 或 \g<id>、\g<name> 引用分组，但不能使用编号 0。当 repl 是一个方法时，这个方法应当只接受一个参数（Match对象），并返回一个字符串用于替换（返回的字符串中不能再引用分组）。count用于指定最多替换次数，不指定时全部替换。
+使用 repl 替换 string 中每一个匹配的子串后返回替换后的字符串。参数 repl 可以是一个字符串也可以是一个函数。当 repl 是一个字符串时，可以使用 \id 或 \g<id>、\g<name> 引用分组，但不能使用编号 0。当 repl 是一个方法时，这个方法应当只接受一个参数（Match对象），并返回一个字符串用于替换（返回的字符串中不能再引用分组）。count 用于指定最多替换次数，不指定时全部替换。
+
+```python
+>>> s = "hello huoty, nihao huoty"
+>>> re.sub(r"hello (\w+), nihao \1", "huayong", s)
+'huayong'
+>>> re.sub(r"hello (\w+), nihao \1", "\g<1>", s)
+'huoty'
+>>> re.sub(r"hello (\w+), nihao \1", lambda m: 'li', s)
+'li'
+>>> re.sub(r"huoty", 'huayong', s)
+'hello huayong, nihao huayong'
+>>> re.sub(r"huoty", 'huayong', s, 1)
+'hello huayong, nihao huoty'
+```
 
 ### 10. re.subn
 
@@ -258,11 +337,41 @@ pattern.sub(repl, string[, count]) | re.sub(pattern, repl, string[, count])
 pattern.subn(repl, string[, count]) | re.sub(pattern, repl, string[, count])
 ```
 
-返回 (sub(repl, string[, count]), 替换次数)
+返回 (sub(repl, string[, count]), 替换次数)，即将替换的次数一并返回。
+
+```python
+>>> s = "hello huoty, nihao huoty"
+>>> re.subn(r"huoty", 'huayong', s)
+('hello huayong, nihao huayong', 2)
+>>> re.subn(r"huoty", 'huayong', s, 1)
+('hello huayong, nihao huoty', 1)
+```
 
 ## Re 模块常用方法总结
 
 ![Re 模块常用方法总结](http://ww3.sinaimg.cn/mw690/c3c88275gw1f53scpabgoj20ei0e7dhf.jpg)
+
+
+## 常用正则表达式
+
+- 汉字：^[\u4e00-\u9fa5]{0,}$
+- 英文和数字：^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$
+- 长度为3-20的所有字符：^.{3,20}$
+- 由26个英文字母组成的字符串：^[A-Za-z]+$
+- 由26个大写英文字母组成的字符串：^[A-Z]+$
+- 由26个小写英文字母组成的字符串：^[a-z]+$
+- 由数字和26个英文字母组成的字符串：^[A-Za-z0-9]+$
+- 由数字、26个英文字母或者下划线组成的字符串：^\w+$ 或 ^\w{3,20}$
+- 中文、英文、数字包括下划线：^[\u4E00-\u9FA5A-Za-z0-9_]+$
+- 中文、英文、数字但不包括下划线等符号：^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$
+- 可以输入含有^%&’,;=?$\”等字符：[^%&',;=?$\x22]+
+- 禁止输入含有~的字符：[^~\x22]+
+- Email地址：^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
+- 域名：[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?
+- 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$
+- 密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：^[a-zA-Z]\w{5,17}$
+- 强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+- 日期格式：^\d{4}-\d{1,2}-\d{1,2}
 
 
 ## 参考资料
