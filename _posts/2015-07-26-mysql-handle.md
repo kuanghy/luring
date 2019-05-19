@@ -277,6 +277,7 @@ show errors;
 
 # 查看 binlog
 show master logs;
+show master status;
 show binlog events in 'mysql-bin.000003';
 
 # 查看存储过程和函数的状态
@@ -322,12 +323,33 @@ alter table 表名 drop column 字段名称;
 
 **binlog：**
 
-查看 binlog 日志： show master logs;
-删除binlog日志：reset master;
+`binlog` 即二进制日志，其记录对数据发生或潜在发生更改的 SQL 语句，并以二进制的形式保存在磁盘中。二进制日志可以用来查看数据库的变更历史（具体的时间点所有的 SQL 操作）、数据库增量备份和恢复（增量备份和基于时间点的恢复）、Mysql 的复制（主主数据库的复制、主从数据库的复制）等。
 
-## 缺省库和表
+二进制日志有三种格式，**STATEMENT**：基于SQL语句的复制(statement-based replication, SBR)；**ROW**：基于行的复制(row-based replication, RBR)；**MIXED**：混合模式复制(mixed-based replication, MBR)。
 
-pass
+二进制日志的相关操作：
+
+```
+# 查看 binlog 相关配置
+show variables like '%log_bin%';
+
+# 查看 binlog 日志文件列表
+show master logs;
+show binary logs;
+
+# 当前正在使用的 binlog 及当前日志位置
+show master status;
+
+# 查看 binlog 内容
+show binlog events in 'mysql-bin.000005'
+
+# 删除所有的binglog日志文件
+reset master;
+```
+
+此外，还可以使用 mysqlbinlog 工具查看 binlog 内容：
+
+> mysqlbinlog --no-defaults log/mysql-bin.000007
 
 ## 生成测试数据
 
