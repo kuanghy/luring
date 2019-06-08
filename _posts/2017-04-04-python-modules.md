@@ -28,6 +28,7 @@ tags: python
 - [environs](https://github.com/sloria/environs) 解析环境变量的库。受 envparse 启发，底层使用 marshmallow 验证并序列化值
 - [swig](http://www.swig.org/Doc1.3/Python.html) Python 调用 C/C++ 代码的工具，支持 C++ 的类继承
 - [pyperclip](https://github.com/asweigart/pyperclip) 向计算机的剪贴板发送或接收文本
+- [py-setproctitle](https://github.com/dvarrazzo/py-setproctitle) 一个可以改变进程名称的库
 
 
 ## 日志处理

@@ -233,6 +233,9 @@ SELECT * FROM mysql.user WHERE user='username' AND host='host' \G;
 # 查看所有支持的存储引擎  
 show engines;
 
+# 查看 InnoDB 存储引擎状态
+show engine innodb status;
+
 # 系统特定资源的信息，如正在运行的线程数量
 show status;
 
@@ -295,11 +298,18 @@ create databases 数据库名;
 
 # 删除数据库
 drop database 数据库名;
+drop database if exists 数据库名;
+
+# 选择要操作的数据库
+use database_name;
+
+# 查看当前选中的数据库
+select database();
 
 # 查看表结构
 desc 表名;
-show columns from 表名;
 describe 表名;
+show columns from 表名;
 
 # 清空表
 delete from 表名;
@@ -319,6 +329,17 @@ alter table 表名 add 字段名称 字段类型 [是否允许非空] comment '�
 
 # 删除字段：
 alter table 表名 drop column 字段名称;
+```
+
+**其他操作：**
+
+```
+# 查看 mysql 版本
+status;  # 与 \s; 等价
+select version();
+
+# 同时查看当前时间，用户名，数据库版本
+select now(), user(), version()
 ```
 
 **binlog：**
@@ -412,6 +433,8 @@ DELIMITER ;
 CALL insert_test_data(1000000);
 DROP PROCEDURE insert_test_data;
 ```
+
+也可以通过一些 Web 工具生成测试数据，如：[http://www.generatedata.com](http://www.generatedata.com)
 
 ## 实用脚本
 
